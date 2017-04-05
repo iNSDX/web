@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/estilo2.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Gestión Estanco</title>
@@ -26,94 +27,241 @@
     <link rel="stylesheet" href="styles/estilo1.css">
 
 </head>
+
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Gestión Estanco</a>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Gestión Estanco</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Inicio</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tabaco<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web/Tabaco/cigarrillos.html">Cigarrillos</a></li>
+                            <li><a href="web/Tabaco/liar.html">De Liar</a></li>
+                            <li><a href="web/Tabaco//puros.html">Puros</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Golosinas<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web/Tabaco/cigarrillos.html">Cigarrillos</a></li>
+                            <li><a href="web/Tabaco/liar.html">De Liar</a></li>
+                            <li><a href="web/Tabaco//puros.html">Puros</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Papelería<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web/Tabaco/cigarrillos.html">Cigarrillos</a></li>
+                            <li><a href="web/Tabaco/liar.html">De Liar</a></li>
+                            <li><a href="web/Tabaco//puros.html">Puros</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otros<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web/Tabaco/cigarrillos.html">Cigarrillos</a></li>
+                            <li><a href="web/Tabaco/liar.html">De Liar</a></li>
+                            <li><a href="web/Tabaco//puros.html">Puros</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="web/Contacto/contacto.html">Contacto</a></li>
+                </ul>˘
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><!--<a href="/web/Login/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                        <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Login</a></p>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#">Tabaco</a></li>
-                <li><a href="#">Golosinas</a></li>
-                <li><a href="#">Papeleria</a></li>
-                <li><a href="#">Otros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
+    </nav>
+
+    <!-- BEGIN # MODAL LOGIN                INCLUIR APARTE -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+		                <div class="modal-body">
+				    		<div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Type your username and password.</span>
+                            </div>
+				    		<input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+				    		<input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            </div>
+				    	    <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+    	    		    <div class="modal-body">
+		    				<div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+		    				<input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+            		    <div class="modal-body">
+		    				<div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+		    				<input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form -->
+                
+			</div>
+		</div>
+	</div>
+    <!-- END # MODAL LOGIN -->
+    
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1><img src="img/logo.jpg"></h1>
         </div>
     </div>
-</nav>
+    <div class="col-sm-9">
 
-<div class="jumbotron">
-    <div class="container text-center">
-        <h1>Gestión Estanco</h1>
-        <p>Expendiduría Nº1 Ibros</p>
     </div>
-</div>
-<div class="col-sm-9">
 
-</div>
+    <div class="col-sm-3 sidenav">
+        <ul class="nav nav-pills nav-stacked">
 
-<div class="col-sm-3 sidenav">
-    <ul class="nav nav-pills nav-stacked">
-
-        <!-- Responsive calendar - START -->
-        <div class="responsive-calendar">
-            <div class="controls">
-                <a class="pull-left" data-go="prev"><div class="btn btn-primary">Anterior</div></a>
-                <h4><span data-head-year></span> <span data-head-month></span></h4>
-                <a class="pull-right" data-go="next"><div class="btn btn-primary">Siguiente</div></a>
-            </div><hr/>
-            <div class="day-headers">
-                <div class="day header">L</div>
-                <div class="day header">M</div>
-                <div class="day header">X</div>
-                <div class="day header">J</div>
-                <div class="day header">V</div>
-                <div class="day header">S</div>
-                <div class="day header">D</div>
+            <!-- Responsive calendar - START -->
+            <div class="responsive-calendar">
+                <div class="controls">
+                    <a class="pull-left" data-go="prev">
+                        <div class="btn btn-primary">Anterior</div>
+                    </a>
+                    <h4><span data-head-year></span> <span data-head-month></span></h4>
+                    <a class="pull-right" data-go="next">
+                        <div class="btn btn-primary">Siguiente</div>
+                    </a>
+                </div>
+                <hr/>
+                <div class="day-headers">
+                    <div class="day header">L</div>
+                    <div class="day header">M</div>
+                    <div class="day header">X</div>
+                    <div class="day header">J</div>
+                    <div class="day header">V</div>
+                    <div class="day header">S</div>
+                    <div class="day header">D</div>
+                </div>
+                <div class="days" data-group="days">
+                </div>
             </div>
-            <div class="days" data-group="days">
-            </div>
-        </div>
-        <!-- Responsive calendar - END -->
+            <!-- Responsive calendar - END -->
 
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar">
-            <span class="input-group-btn">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar">
+                <span class="input-group-btn">
           <button class="btn btn-default" type="button">
             <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
+                </button>
+                </span>
 
 
-        </div>
-    </ul><br>
-</div>
-<script src="responsive-calendar/0.9/js/jquery.js"></script>
-<script src="responsive-calendar/0.9/js/bootstrap.min.js"></script>
-<script src="responsive-calendar/0.9/js/responsive-calendar.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $(".responsive-calendar").responsiveCalendar({
-            time: '',
-            events: {
-                "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
-                "2013-04-26": {"number": 1, "url": "http://w3widgets.com"},
-                "2013-05-03":{"number": 1},
-                "2013-06-12": {}}
+            </div>
+        </ul>
+        <br>
+    </div>
+    <script src="responsive-calendar/0.9/js/jquery.js"></script>
+    <script src="responsive-calendar/0.9/js/bootstrap.min.js"></script>
+    <script src="responsive-calendar/0.9/js/responsive-calendar.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".responsive-calendar").responsiveCalendar({
+                time: '',
+                events: {
+                    "2013-04-30": {
+                        "number": 5,
+                        "url": "http://w3widgets.com/responsive-slider"
+                    },
+                    "2013-04-26": {
+                        "number": 1,
+                        "url": "http://w3widgets.com"
+                    },
+                    "2013-05-03": {
+                        "number": 1
+                    },
+                    "2013-06-12": {}
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
