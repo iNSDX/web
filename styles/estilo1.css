@@ -13,3 +13,11 @@ footer {
 .principal {
     background-color: white;
 }
+
+/* On small screens */
+@media screen and (max-width: 767px) {
+    #logo {
+        width: 80%;
+        height: 80%;
+    }
+}
