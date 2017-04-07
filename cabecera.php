@@ -1,3 +1,4 @@
+<header>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -6,11 +7,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Gestión Estanco</a>
+            <a class="navbar-brand" href="https://github.com/GestionEstanco/web">Gestión Estanco</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
+                <li class="active"><a href="index.php">Inicio</a></li>
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">Tabaco<b class="caret"></b></a>
@@ -48,13 +49,14 @@
                     </ul>
                 </li>
 
-                <li><a href="web/Contacto/contacto.html">Contacto</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#login-modal">Login <span class="glyphicon glyphicon-log-in"></span></a>
+                    <a href="" data-toggle="modal" data-target="#login-modal">Login <span class="glyphicon glyphicon-log-in"></span></a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+</header>

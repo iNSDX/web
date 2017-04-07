@@ -40,7 +40,7 @@
 
 <div class="jumbotron_principal">
         <div class="container text-center">
-            <h1><img id="logo" src="img/logo.jpg"></h1>
+            <h1><img id="logo" src="img/logo.jpg" alt="No photo"></h1>
         </div>
     </div>
 
@@ -51,7 +51,6 @@
     <div class="col-sm-3 sidenav">
         <ul class="nav nav-pills nav-stacked">
             <?php include_once("lateral_derecho.php"); ?>
-          </div>
         </ul>
     </div>
 
