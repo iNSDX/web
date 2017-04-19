@@ -14,6 +14,8 @@
     <!-- Respomsive slider -->
     <link href="responsive-calendar/0.9/css/responsive-calendar.css" rel="stylesheet">
 
+    <!-- Plugin para menu hover -->
+    <script src="js/bootstrap-hover-dropdown.min.js"></script>
 
     <!-- Mi hoja de estilo -->
     <link rel="stylesheet" href="css/estilo2.css">
