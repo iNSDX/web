@@ -37,7 +37,7 @@
             <div class="well well-sm">
                 <form class="form-horizontal" method="post">
                     <fieldset>
-                        <legend class="text-center header">Contacta con nosotros</legend>
+                        <legend class="text-center header">Contacta con nosotros</legend> <!-- Abcd -->
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
