@@ -37,7 +37,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="well well-sm">
-                <form action="procesa_contacto.php" class="form-horizontal" method="post">
+                <form action="php\procesa_contacto.php" class="form-horizontal" method="post">
                     <fieldset>
                         <legend class="text-center header">Contacta con nosotros</legend> <!-- Prueba commit -->
                         <div class="form-group">
