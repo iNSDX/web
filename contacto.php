@@ -7,12 +7,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
     <script src="js/mapa.js" type="text/javascript"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx0fnG-FnCLrIV6sSWcsEZjuD7q4H3sik&callback=initMap"></script>
     <title>Gestión Estanco</title>
 
-    <!-- Respomsive slider -->
-    <link href="responsive-calendar/0.9/css/responsive-calendar.css" rel="stylesheet">
+    <!-- Responsive slider -->
+    <!--<link href="responsive-calendar/0.9/css/responsive-calendar.css" rel="stylesheet">-->
 
     <!-- Plugin para menu hover -->
     <script src="js/bootstrap-hover-dropdown.min.js"></script>
@@ -20,12 +22,19 @@
     <!-- Mi hoja de estilo -->
     <link rel="stylesheet" href="css/estilo2.css">
 
+    <!-- Login - Register -->
+
+    <script src="js/login-register.js" type="text/javascript"></script>
+    <link href="css/bootstrap_edit.css" rel="stylesheet" />
+    <link href="css/login-register.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
 </head>
 
 <body>
-
+    <?php include_once("php/retrieveFormData.php"); ?>
     <?php include_once("cabecera.php"); ?>
-    <?php include_once("login.php"); ?>
+    <?php include_once("php/login_register_modal.php"); ?>
 
     <div class="jumbotron_principal">
         <div class="container text-center">
@@ -88,7 +97,7 @@
                         23450 Ibros (Jaén)<br />
                         Calle Virgen de Los Remedios Nº50 <br />
                         999 - 123456<br/>
-                        correo@estanco.com<br />
+                        gestanco@protonmail.com<br />
                         </div>
                         <hr/>
                         <div id="map1" class="map">

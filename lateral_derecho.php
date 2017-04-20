@@ -31,10 +31,7 @@
 <span class="glyphicon glyphicon-search"></span>
     </button>
     </span>
-
-    <script src="responsive-calendar/0.9/js/jquery.js"></script>
-    <script src="responsive-calendar/0.9/js/bootstrap.min.js"></script>
-    <script src="responsive-calendar/0.9/js/responsive-calendar.js"></script>
+    
     <script type="text/javascript">
         $(document).ready(function () {
             $(".responsive-calendar").responsiveCalendar({

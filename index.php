@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
 
     <!-- Plugin para menu hover -->
     <script src="js/bootstrap-hover-dropdown.min.js"></script>
@@ -19,24 +21,22 @@
     <link href="responsive-calendar/0.9/css/responsive-calendar.css" rel="stylesheet">
 
     <!-- Calendario -->
-    <meta name="distributor" content="Global" />
-    <meta itemprop="contentRating" content="General" />
-    <meta name="robots" content="All" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="description" content="The source of truly unique and awesome jquery plugins." />
-    <meta name="keywords" content="slider, carousel, responsive, swipe, one to one movement, touch devices, jquery, plugin, bootstrap compatible, html5, css3" />
-    <meta name="author" content="w3widgets.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="responsive-calendar/0.9/js/responsive-calendar.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
 
+    <!-- Login - Register -->
+    <script src="js/login-register.js" type="text/javascript"></script>
+    <link href="css/bootstrap_edit.css" rel="stylesheet" />
+	<link href="css/login-register.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
     <title>Gestión Estanco</title>
 </head>
 
 <body>
-
+<?php include_once("php/retrieveFormData.php"); ?>
 <?php include_once("cabecera.php"); ?>
-<?php include_once("login.php"); ?>
+<?php include_once("php/login_register_modal.php"); ?>
 
 <div class="jumbotron_principal">
         <div class="container text-center">
@@ -53,6 +53,9 @@
             <?php include_once("lateral_derecho.php"); ?>
         </ul>
     </div>
+
+
+
 
     <?php include_once("pie.php"); ?>
 

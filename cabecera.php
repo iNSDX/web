@@ -53,7 +53,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="" data-toggle="modal" data-target="#login-modal">Login <span class="glyphicon glyphicon-log-in"></span></a>
+                    <!--<a href="" data-toggle="modal" data-target="#login-modal">Login <span class="glyphicon glyphicon-log-in"></span></a>-->
+                    <a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
+                </li>
+                <li>
+                    <a data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</a>
                 </li>
             </ul>
         </div>
