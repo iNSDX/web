@@ -52,6 +52,7 @@
                 <li><a href="contacto.php">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <?php if (!isset($_SESSION['login'])) {	?>
                 <li>
                     <!--<a href="" data-toggle="modal" data-target="#login-modal">Login <span class="glyphicon glyphicon-log-in"></span></a>-->
                     <a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
@@ -59,6 +60,11 @@
                 <li>
                     <a data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</a>
                 </li>
+                <?php } ?>
+                <li>	<?php if (isset($_SESSION['login'])) {	?>
+    						<a href="php/logout.php">Desconectar</a>
+    					<?php } ?>
+    			</li>
             </ul>
         </div>
     </div>

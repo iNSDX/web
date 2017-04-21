@@ -34,7 +34,7 @@
 <body>
     <?php include_once("php/retrieveFormData.php"); ?>
     <?php include_once("cabecera.php"); ?>
-    <?php include_once("php/login_register_modal.php"); ?>
+    <?php include_once("login_register_modal.php"); ?>
 
     <div class="jumbotron_principal">
         <div class="container text-center">

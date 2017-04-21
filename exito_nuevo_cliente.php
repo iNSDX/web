@@ -15,7 +15,7 @@
 		$_SESSION["formulario"]=null;
 		$_SESSION["errores"]=null;
 	}else{
-		Header("Location:index.php");
+		Header("Location: index.php");
 	}
 
 	// ABRIR LA CONEXIÓN A LA BASE DE DATOS
@@ -39,12 +39,12 @@
 	<main>
 		<!-- CONSULTAR EL TEMA DE TEORÍA SOBRE ACCESO A DATOS -->
 			<?php
-            if (alta_usuario($conexion, $nuevoUsuario)) {
+            if (nuevo_cliente($conexion, $nuevoUsuario)) {
                 $_SESSION["login"] = $nuevoUsuario["email"];
 		?>
 
 <h1>Hola <?php echo $nuevoUsuario["nombre"]; ?>, gracias por registrarte.</h1>
-        <div> Pulsa <a href="consulta_libros.php">aquí</a> para acceder a la gestión de la biblioteca</div>
+        <div> Pulsa <a href="index.php">aquí</a> para volver al formulario</div>
 				<!-- MENSAJE DE BIENVENIDO AL USUARIO -->
 		<?php } else { ?>
         <h1>El usuario ya existe en la base de datos</h1>

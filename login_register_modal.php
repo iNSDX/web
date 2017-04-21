@@ -27,10 +27,11 @@
                                 </div>
                                 <div class="error"></div>
                                 <div class="form loginBox">
-                                    <form method="post" action="/login" accept-charset="UTF-8">
+                                    <form action="php/procesar_login.php" method="post">
                                     <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    <input class="btn btn-default btn-login" type="submit" name="submit" value="Log in">
+                                    <!--<input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">-->
                                     </form>
                                 </div>
                              </div>
@@ -38,7 +39,7 @@
                         <div class="box">
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
-                                <form method="post" html="{:multipart=>true}" data-remote="true" action="procesar_nuevo_usuario.php" accept-charset="UTF-8"/>
+                                <form action="php/procesar_nuevo_usuario.php" method="get" html="{:multipart=>true}"/>
                                 <input id="nombre" name="nombre" placeholder="Nombre" class="form-control" type="text" value="<?php echo $formulario['nombre'];?>" required/>
                                 <input id="apellidos" name="apellidos" placeholder="Apellidos" class="form-control" type="text" value="<?php echo $formulario['apellidos'];?>" required/>
                                 <input id="fechaNacimiento" name="fechaNacimiento" class="form-control" type="date" value="<?php echo $formulario['fechaNacimiento'];?>" required/>

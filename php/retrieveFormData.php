@@ -17,7 +17,7 @@
 		$formulario = $_SESSION['formulario'];
 
 	// Si hay errores de validación, hay que mostrarlos y marcar los campos (El estilo viene dado y ya se explicará)
-	if (isset($_SESSION["errores"]))
+	/*if (isset($_SESSION["errores"]))
 		$errores = $_SESSION["errores"];
 
     // Mostrar los erroes de validación (Si los hay)
@@ -26,5 +26,5 @@
         echo "<h4> Errores en el formulario:</h4>";
         foreach($errores as $error) echo $error;
         echo "</div>";
-    }
+    }*/
 ?>
