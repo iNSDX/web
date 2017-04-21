@@ -32,9 +32,6 @@
 </head>
 
 <body>
-	<?php
-		include_once("cabecera.php");
-	?>
 
 	<main>
 		<!-- CONSULTAR EL TEMA DE TEORÍA SOBRE ACCESO A DATOS -->

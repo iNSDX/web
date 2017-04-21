@@ -20,7 +20,7 @@
      $stmt->bindParam(':ape',$usuario["apellidos"]);
      $stmt->bindParam(':fec',$fechaNacimiento);
      $stmt->bindParam(':email',$usuario["email"]);
-     $stmt->bindParam(':pass',$usuario["pass"]);
+     $stmt->bindParam(':pass',$usuario["password"]);
      $stmt->execute();
      return true;
 
