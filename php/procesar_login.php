@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	//session_start();
 
   	include_once("conexionesBD.php");
  	include_once("gestionClientes.php");

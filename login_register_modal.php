@@ -9,28 +9,12 @@
                     <div class="modal-body">
                         <div class="box">
                              <div class="content">
-                                <div class="social">
-                                    <a class="circle github" href="/auth/github">
-                                        <i class="fa fa-github fa-fw"></i>
-                                    </a>
-                                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
-                                        <i class="fa fa-google-plus fa-fw"></i>
-                                    </a>
-                                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
-                                        <i class="fa fa-facebook fa-fw"></i>
-                                    </a>
-                                </div>
-                                <div class="division">
-                                    <div class="line l"></div>
-                                      <span>or</span>
-                                    <div class="line r"></div>
-                                </div>
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <form action="php/procesar_login.php" method="post">
                                     <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                    <input class="btn btn-default btn-login" type="submit" name="submit" value="Log in">
+                                    <input id="password" class="form-control" type="password" placeholder="Contraseña" name="password">
+                                    <input class="btn-js" type="submit" name="submit" value="Iniciar sesión">
                                     <!--<input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">-->
                                     </form>
                                 </div>
@@ -44,9 +28,9 @@
                                 <input id="apellidos" name="apellidos" placeholder="Apellidos" class="form-control" type="text" value="<?php echo $formulario['apellidos'];?>" required/>
                                 <input id="fechaNacimiento" name="fechaNacimiento" class="form-control" type="date" value="<?php echo $formulario['fechaNacimiento'];?>" required/>
                                 <input id="email" name="email" placeholder="Email" class="form-control" type="text" value="<?php echo $formulario['email'];?>" required/>
-                                <input id="password" name="password" placeholder="Password" class="form-control" type="password" required/>
-                                <input id="password_confirmation" name="password_confirmation" placeholder="Repeat Password" class="form-control" type="password" required/>
-                                <input class="btn btn-default btn-register" name="commit" type="submit" value="Create account"/>
+                                <input id="password" name="password" placeholder="Contraseña" class="form-control" type="password" required/>
+                                <input id="password_confirmation" name="password_confirmation" placeholder="Repite la Contraseña" class="form-control" type="password" required/>
+                                <input class="btn btn-default btn-register" name="commit" type="submit" value="Regístrate"/>
                                 </form>
                                 </div>
                             </div>
@@ -54,13 +38,13 @@
                     </div>
                     <div class="modal-footer">
                         <div class="forgot login-footer">
-                            <span>Looking to
-                                 <a href="javascript: showRegisterForm();">create an account</a>
+                            <span>
+                                 <a href="javascript: showRegisterForm();">Regístrate</a>
                             ?</span>
                         </div>
                         <div class="forgot register-footer" style="display:none">
-                             <span>Already have an account?</span>
-                             <a href="javascript: showLoginForm();">Login</a>
+                             <span>¿Ya tienes una cuenta?</span>
+                             <a href="javascript: showLoginForm();">Inicia sesión</a>
                         </div>
                     </div>
     		      </div>

@@ -1,61 +1,190 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Estanco Nº1 &mdash; Ibros (Jaén)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="jquery/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
 
-    <!-- Plugin para menu hover -->
-    <script src="js/bootstrap-hover-dropdown.min.js"></script>
 
-    <!-- Hoja de estilo -->
-    <link rel="stylesheet" href="css/bootstrap_edit.css">
-    <link rel="stylesheet" href="css/pie.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
 
-    <!-- Responsive slider -->
-    <link href="responsive-calendar/0.9/css/responsive-calendar.css" rel="stylesheet">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Pricing -->
+	<link rel="stylesheet" href="css/pricing.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
 
-    <!-- Calendario -->
-    <script src="responsive-calendar/0.9/js/responsive-calendar.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-
-    <!-- Login - Register -->
-    <script src="js/login-register.js" type="text/javascript"></script>
-    <link href="css/bootstrap_edit.css" rel="stylesheet" />
+	<!-- Login -->
+	<script src="js/login-register.js" type="text/javascript"></script>
+  <link href="css/bootstrap.css" rel="stylesheet" />
 	<link href="css/login-register.css" rel="stylesheet" />
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-    <title>Gestión Estanco</title>
-</head>
 
-<body>
-<?php include_once("php/retrieveFormData.php"); ?>
-<?php include_once("cabecera.php"); ?>
-<?php include_once("login_register_modal.php"); ?>
 
-<div class="jumbotron_principal">
-        <div class="container text-center">
-            <h1><img id="logo" src="img/logo.jpg" alt="No photo"></h1>
-        </div>
-    </div>
+	</head>
 
-    <div class="col-sm-9 sidenav">
-          <?php include_once("ofertas.php"); ?>
-          </div>
+    <body>
+			<?php
+					include_once("php/retrieveFormData.php");
+					include_once("includes/cabecera.php");
+					include_once("login_register_modal.php");
+			?>
 
-    <div class="col-sm-3 sidenav">
-        <ul class="nav nav-pills nav-stacked">
-            <?php include_once("lateral_derecho.php"); ?>
-        </ul>
-    </div>
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+		   	<li style="background-image: url(images/img_bg_1.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>¡Bienvenidos!</h1>
+									<h2>Expendeduría Nº1 de Ibros</h2>
 
-    <?php include_once("pie.php"); ?>
 
-</body>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(images/img_bg_2.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>Oferta 1</h1>
+									<h2>aaaaaaaaa <a target="_blank">aaaaaaaaa</a></h2>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(images/img_bg_2.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>Oferta 1</h1>
+									<h2>aaaaaaaaa <a target="_blank">aaaaaaaaa</a></h2>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
 
+		  	</ul>
+	  	</div>
+	</aside>
+
+	<div id="fh5co-course-categories">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Nuestros Productos</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-box"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Tabaco</a></h3>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-pen2"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Papelería</a></h3>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-food"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Comestibles</a></h3>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-th-list"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Otros</a></h3>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<?php include_once("includes/pie.php") ?>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Count Down -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
 </html>
