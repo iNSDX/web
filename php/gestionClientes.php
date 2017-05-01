@@ -6,6 +6,16 @@
      * #==========================================================#
      */
 
+function consultarTodosClientes($conexion) {
+     	$consulta = "SELECT * FROM CLIENTES ORDER BY APELLIDOS, NOMBRE";
+     	try {
+     	    return $conexion->query($consulta);
+     	}catch(PDOException $e){
+     		$_SESSION['excepcion'] = $e->GetMessage();
+     		header("Location: ../error.php");
+     	}
+}
+
  function nuevo_cliente($conexion,$usuario) {
    // BUSCA LA OPERACIÓN ALMACENADA "INSERTAR_USUARIO" EN SQL
  	// 			PARA SABER CUÁLES SON SUS PARÁMETROS.
@@ -20,7 +30,7 @@
      $stmt->bindParam(':ape',$usuario["apellidos"]);
      $stmt->bindParam(':fec',$fechaNacimiento);
      $stmt->bindParam(':email',$usuario["email"]);
-     $stmt->bindParam(':pass',$usuario["password"]);
+     $stmt->bindParam(':pass',$usuario["pass"]);
      $stmt->execute();
      return true;
 
@@ -42,4 +52,41 @@ function consultarCliente($conexion,$email,$pass) {
   return $stmt->fetchColumn();
 
 }
+
+function modificar_cliente($conexion,$idCliente,$nombre,$apellidos,$fechaNacimiento) {
+	try {
+		$stmt=$conexion->prepare('CALL MOD_CLIENTE(:idCliente,:nombre,:apellidos,:fechaNacimiento)');
+		$stmt->bindParam(':idCliente',$idCliente);
+		$stmt->bindParam(':nombre',$nombre);
+        $stmt->bindParam(':apellidos',$apellidos);
+        $stmt->bindParam(':fechaNacimiento',$fechaNacimiento);
+		$stmt->execute();
+		return true;
+	} catch(PDOException $e) {
+		return false;
+    }
+}
+
+function aceptar_cliente($conexion,$idCliente) {
+	try {
+		$stmt=$conexion->prepare('CALL ACEPTAR_CLIENTE(:idCliente)');
+		$stmt->bindParam(':idCliente',$idCliente);
+		$stmt->execute();
+		return true;
+	} catch(PDOException $e) {
+		return false;
+    }
+}
+
+function quitar_cliente($conexion,$idCliente) {
+	try {
+		$stmt=$conexion->prepare('CALL DEL_CLIENTE(:idCliente)');
+		$stmt->bindParam(':idCliente',$idCliente);
+		$stmt->execute();
+		return "";
+	} catch(PDOException $e) {
+		return $e->getMessage();
+    }
+}
+
 ?>

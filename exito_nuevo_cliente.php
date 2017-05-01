@@ -28,10 +28,13 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<title>Gestanco - Cliente registrado correctamente</title>
+  	<title>Gestanco - Registro Cliente</title>
 </head>
 
 <body>
+	<?php
+		include_once("cabecera.php");
+	?>
 
 	<main>
 		<!-- CONSULTAR EL TEMA DE TEORÍA SOBRE ACCESO A DATOS -->

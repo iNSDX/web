@@ -47,7 +47,7 @@
 					<div class="staff">
 						<div class="staff-img" style="background-image: url(images/staff-1.jpg);">
 						</div>
-						<h3><a href="tabaco/cigarrillos.php">Cigarrillos</a></h3>
+						<h3><a href="cigarrillos.php">Cigarrillos</a></h3>
 						<p>Descripción</p>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	
+
 	</script>
 	</body>
 </html>

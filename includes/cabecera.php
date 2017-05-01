@@ -1,7 +1,6 @@
 
 <div id="page">
 	<nav class="fh5co-nav" role="navigation">
-
 		<div class="top-menu">
 			<div class="container">
 				<div class="row">
@@ -50,8 +49,6 @@
 								</ul>
 							</li>
 							<li><a href="contacto.php">Contacto</a></li>
-
-
 
 							<li class="btn-cta"><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();"><span>Iniciar sesión</span></a>
 							<li class="btn-cta1"><a data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();"><span>Regístrate</span></a>
