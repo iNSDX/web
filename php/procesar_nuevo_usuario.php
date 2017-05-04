@@ -1,64 +1,77 @@
 <?php
+
 	session_start();
 
-	// Comprobar que hemos llegado a esta página porque se ha rellenado el formulario
-	if (isset($_SESSION["formulario"])) {
-		// Recogemos los datos del formulario
-		$nuevoUsuario["nombre"] = $_REQUEST["nombre"];
-		$nuevoUsuario["apellidos"] = $_REQUEST["apellidos"];
-		$nuevoUsuario["email"] = $_REQUEST["email"];
-		$nuevoUsuario["fechaNacimiento"] = $_REQUEST["fechaNacimiento"];
-		$nuevoUsuario["password"] = $_REQUEST["password"];
-		$nuevoUsuario["password_confirmation"] = $_REQUEST["password_confirmation"];
-	}
-	else // En caso contrario, vamos al formulario
-		Header("Location: ../index.php");
+require "conexionesBD.php";
+require "gestionClientes.php";
 
-	// Guardar la variable local con los datos del formulario en la sesión.
-	$_SESSION["formulario"] = $nuevoUsuario;
+if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']){
 
-	// Validamos el formulario en servidor
-	$errores = validarDatosUsuario($nuevoUsuario);
+	$secret = "6LdUaR8UAAAAAHXWf98CTBs1MnjKAem2rfOnnVGR";
+	$captcha = $_POST['g-recaptcha-response'];
+	$result = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha");
+	$recaptcha = json_decode($result,TRUE);
+	$errores = "";
 
-	// Si se han detectado errores
-	if (count($errores)>0) {
-		// Guardo en la sesión los mensajes de error y volvemos al formulario
-		$_SESSION["errores"] = $errores;
+	if($recaptcha["success"]){
+
+		$conexion=crearConexionBD();
+
+		$nuevoUsuario["nombre"] = $_POST["nombre"];
+		$nuevoUsuario["apellidos"] = $_POST["apellidos"];
+		$nuevoUsuario["email"] = $_POST["email"];
+		$nuevoUsuario["fechaNacimiento"] = $_POST["fechaNacimiento"];
+		$nuevoUsuario["password"] = $_POST["password"];
+		$nuevoUsuario["password_confirmation"] = $_POST["password_confirmation"];
+
+		$_SESSION["registro"] = $nuevoUsuario;
+
+		$errores = validarDatosUsuario($nuevoUsuario);
+
+		if (count($errores)>0) {
+			$_SESSION["errores"] = $errores;
+			Header('Location: error.php');
+		}else{
+			if(isset($_SESSION["registro"]) && nuevo_cliente($conexion,$nuevoUsuario)){
+				$_SESSION['resgistrook']= "Registrado correctamente, inicie sesión.";
+				Header('Location: ../exito_registro.php');
+			}
+		}
+	}else{
+		$_SESSION['recaptcha'] = 'ReCaptcha Inválido.';
 		Header('Location: ../index.php');
-	} else
-		// Si todo va bien, vamos a la página de éxito (inserción del usuario en la base de datos)
-		Header('Location: ../exito_nuevo_cliente.php');
-
-	///////////////////////////////////////////////////////////
-	// Validación en servidor del formulario de alta de usuario
-	///////////////////////////////////////////////////////////
-	function validarDatosUsuario($nuevoUsuario){
-
-		// Validación del Nombre
-		if($nuevoUsuario["nombre"]=="")
-			$errores[] = "<p>El nombre no puede estar vacío</p>";
-
-		if($nuevoUsuario["apellidos"]=="")
-			$errores[] = "<p>Los apellidos no pueden estar vacíos</p>";
-
-		// Validación del email
-		if($nuevoUsuario["email"]==""){
-			$errores[] = "<p>El email no puede estar vacío</p>";
-		}else if(!filter_var($nuevoUsuario["email"], FILTER_VALIDATE_EMAIL)){
-			$errores[] = $error . "<p>El email es incorrecto: " . $nuevoUsuario["email"]. "</p>";
-		}
-
-		// Validación de la contraseña
-		if(!isset($nuevoUsuario["password"]) || strlen($nuevoUsuario["password"])<8){
-			$errores [] = "<p>Contraseña no válida: debe tener al menos 8 caracteres</p>";
-		}else if(!preg_match("/[a-z]+/", $nuevoUsuario["password"]) ||
-			!preg_match("/[A-Z]+/", $nuevoUsuario["password"]) || !preg_match("/[0-9]+/", $nuevoUsuario["password"])){
-			$errores[] = "<p>Contraseña no válida: debe contener letras mayúsculas y minúsculas y dígitos</p>";
-		}else if($nuevoUsuario["password"] != $nuevoUsuario["password_confirmation"]){
-			$errores[] = "<p>La confirmación de contraseña no coincide con la contraseña</p>";
-		}
-
-		return $errores;
 	}
+}else{
+	$_SESSION['recaptcha'] = 'ReCaptcha Inválido.';
+	Header('Location: ../index.php');
+}
+
+function validarDatosUsuario($nuevoUsuario){
+
+	if($nuevoUsuario["nombre"]=="")
+	  $errores[]= "<p>El nombre no puede estar vacío</p>";
+
+	if($nuevoUsuario["apellidos"]=="")
+	  $errores[]= "<p>Los apellidos no pueden estar vacíos</p>";
+
+	if($nuevoUsuario["email"]==""){
+	  $errores[]= "<p>El email no puede estar vacío</p>";
+	}else if(!filter_var($nuevoUsuario["email"], FILTER_VALIDATE_EMAIL)){
+	  $errores[]= $error . "<p>El email es incorrecto: " . $nuevoUsuario["email"]. "</p>";
+	}
+
+	if(!isset($nuevoUsuario["password"]) || strlen($nuevoUsuario["password"])<8){
+	  $errores[]= "<p>Contraseña no válida: debe tener al menos 8 caracteres</p>";
+	}else if(!preg_match("/[a-z]+/", $nuevoUsuario["password"]) ||
+	  !preg_match("/[A-Z]+/", $nuevoUsuario["password"]) || !preg_match("/[0-9]+/", $nuevoUsuario["password"])){
+	  $errores[]= "<p>Contraseña no válida: debe contener letras mayúsculas y minúsculas y dígitos</p>";
+	}else if($nuevoUsuario["password"] != $nuevoUsuario["password_confirmation"]){
+	  $errores[]= "<p>La confirmación de contraseña no coincide con la contraseña</p>";
+	}
+
+	return $errores;
+}
+
+cerrarConexionBD($conexion);
 
 ?>

@@ -175,10 +175,8 @@
     background-color: rgba(0,0,0,0.23);
     color: #FFFFFF;
 }
-.login .box .form input[type="text"], .login .box .form input[type="password"] {
+.login .box .form input[type="text"], .login .box .form input[type="password"], .login .box .form input[type="date"] {
     border-radius: 3px;
-    border: none;
-    color: #333333;
     font-size: 16px;
     height: 46px;
     margin-bottom: 5px;
@@ -217,4 +215,16 @@
 .big-register:hover{
     border-color: #00A4E4;
     color:  #00A4E4;
+}
+.error{
+    background-color: #E74F4F;
+    position: absolute;
+    top: 0;
+    padding: 10px 0;
+    /*border-radius:  0 0 5px 5px;*/
+    border-radius:  0 0 5px 5px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
 }

@@ -1,3 +1,19 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['usuario'])){
+        if($_SESSION['usuario']['TIPO'] == 'Propietario'){
+            header('Location: Propietario/');
+        }else if($_SESSION['usuario']['TIPO'] == 'Gerente'){
+            header('Location: Gerente/');
+        }else if($_SESSION['usuario']['TIPO'] == 'Empleado'){
+            header('Location: Empleado/');
+        }else if($_SESSION['usuario']['TIPO'] == 'Cliente'){
+            header('Location: Cliente/');
+        }
+    }
+ ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -28,22 +44,51 @@
 	<link rel="stylesheet" href="css/pricing.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Count Down -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
 	<!-- Login -->
-	<script src="js/login-register.js" type="text/javascript"></script>
-  <link href="css/bootstrap.css" rel="stylesheet" />
+  	<link href="css/bootstrap.css" rel="stylesheet" />
+    <!--<link href="https://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">-->
 	<link href="css/login-register.css" rel="stylesheet" />
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
-
+	<script src="js/login.js"></script>
+    <script src="js/login-register.js"></script>
+    <!-- Register -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
+    <script src="js/validacionRegistro.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link href="css/register.css" rel="stylesheet">
 
 	</head>
 
     <body>
 			<?php
-					include_once("php/retrieveFormData.php");
 					include_once("includes/cabecera.php");
 					include_once("login_register_modal.php");
 			?>
@@ -161,30 +206,6 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<!-- Count Down -->
-	<script src="js/simplyCountdown.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
 
 	</body>
 </html>

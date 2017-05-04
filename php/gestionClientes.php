@@ -7,7 +7,7 @@
      */
 
 function consultarTodosClientes($conexion) {
-     	$consulta = "SELECT * FROM CLIENTES ORDER BY APELLIDOS, NOMBRE";
+     	$consulta = "SELECT * FROM USUARIOS ORDER BY APELLIDOS, NOMBRE";
      	try {
      	    return $conexion->query($consulta);
      	}catch(PDOException $e){
@@ -16,22 +16,22 @@ function consultarTodosClientes($conexion) {
      	}
 }
 
- function nuevo_cliente($conexion,$usuario) {
+ function nuevo_cliente($conexion,$nuevoUsuario) {
    // BUSCA LA OPERACIÓN ALMACENADA "INSERTAR_USUARIO" EN SQL
  	// 			PARA SABER CUÁLES SON SUS PARÁMETROS.
  	// RECUERDA QUE SE INVOCA MEDIANTE 'CALL' EN PL/SQL
  	// RECUERDA QUE EL FORMATO DE FECHA PARA ORACLE ES "d/m/Y"
  	// UTILIZA EL MÉTODO "PREPARE" DEL OBJETO PDO
  	// RECUERDA EL TRY/CATCH
-  $fechaNacimiento=date('d/m/Y',strtotime($usuario["fechaNacimiento"]));
-   try{
-     $stmt=$conexion->prepare('CALL INSERTAR_NUEVO_CLIENTE(:nombre,:ape,:fec,:email,:pass)');
-     $stmt->bindParam(':nombre',$usuario["nombre"]);
-     $stmt->bindParam(':ape',$usuario["apellidos"]);
-     $stmt->bindParam(':fec',$fechaNacimiento);
-     $stmt->bindParam(':email',$usuario["email"]);
-     $stmt->bindParam(':pass',$usuario["pass"]);
-     $stmt->execute();
+    $fechaNacimiento=date('d-m-Y',strtotime($nuevoUsuario["fechaNacimiento"]));
+    try{
+    $insert="INSERT INTO USUARIOS (IDCLIENTE,NOMBRE,APELLIDOS,FECHA_NACIMIENTO,EMAIL,PASS,ACEPTADO,TIPO) VALUES (sec_idcliente.NEXTVAL,:nombre,:ape,to_date('".$fechaNacimiento."','dd-mm-yy'),:email,:pass,'0','Cliente')";
+    $usuarios=$conexion->prepare($insert);
+    $usuarios->bindParam(':email',$nuevoUsuario["email"]);
+    $usuarios->bindParam(':pass',$nuevoUsuario["password"]);
+    $usuarios->bindParam(':nombre',$nuevoUsuario["nombre"]);
+    $usuarios->bindParam(':ape',$nuevoUsuario["apellidos"]);
+    $usuarios->execute();
      return true;
 
    } catch(PDOException $e){
@@ -45,7 +45,7 @@ function consultarCliente($conexion,$email,$pass) {
 	// 		CON DICHO EMAIL Y PASS
 	// UTILIZA EL MÉTODO "PREPARE" DEL OBJETO PDO
 	// RETORNE EL RESULTADO DEL MÉTODO "FETCHCOLUMN"
-  $stmt=$conexion->prepare('SELECT COUNT(*) AS TOTAL FROM CLIENTES WHERE EMAIL=:email AND PASS=:pass');
+  $stmt=$conexion->prepare('SELECT COUNT(*) AS TOTAL FROM USUARIOS WHERE EMAIL=:email AND PASS=:pass');
   $stmt->bindParam(":email",$email);
   $stmt->bindParam(":pass",$pass);
   $stmt->execute();

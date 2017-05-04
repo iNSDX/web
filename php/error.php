@@ -22,6 +22,7 @@
 
 	<div>
 		<h2>Great! You broke it.</h2>
+		<?php echo $_SESSION['errores'] ?>
         <div class="userPrompt">
             <img src="https://mi-od-live-s.legocdn.com/r/www/-/media/portal%20v2010/errors/404%20mainstage%20image.jpg?l.r2=1953967734" alt="">
         </div>

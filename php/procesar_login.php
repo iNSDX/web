@@ -1,39 +1,39 @@
 <?php
-	//session_start();
 
-  	include_once("conexionesBD.php");
- 	include_once("gestionClientes.php");
+session_start();
 
-	// SI HAY INFORMACIÓN EN $_POST ENTONCES ES QUE
-	// YA SE HA INTRODUCIDO PREVIAMENTE EMAIL Y PASS
-	// ENTONCES:
-	// - RECOGEMOS LOS DATOS DE EMAIL Y PASS EN VARIABLES LOCALES
-	// - SE CREA LA CONEXIÓN A LA BASE DE DATOS
-	// - SE INVOCA LA FUNCIÓN CONSULTARUSUARIO EN GESTIONARUSUARIOS
-	// - SE CIERRA LA CONEXIÓN
-	// - SI HAY UN USUARIO ENTONCES SE ASIGNA EMAIL A LA
-	// - 								VARIABLE DE SESION
-	// - 							SE REDIRIGE A CONSULTA_LIBROS.PHP
+require "conexionesBD.php";
 
-	if(isset($_POST["submit"])){
-		$email=$_POST["email"];
-		$pass=$_POST["password"];
+sleep(2);
 
-		$conexion=crearConexionBD();
-		$num_clientes=consultarCliente($conexion,$email,$pass);
-		cerrarConexionBD($conexion);
+$conexion=crearConexionBD();
 
-		if($num_clientes==0){
-			$login="error";
-		}else{
-			$_SESSION["login"]=$email;
-			Header("Location: ../index.php");
-		}
-	}
+$email=$_POST['emaillg'];
+$password=$_POST['passlg'];
 
-    if (isset($login)) {
-		echo "<div class=\"error\">";
-		echo "Error en la contraseña o no existe el usuario.";
-		echo "</div>";
-	}
-?>
+    $consulta="SELECT NOMBRE,TIPO FROM USUARIOS WHERE EMAIL=:email AND PASS=:pass";
+    $usuarios=$conexion->prepare($consulta);
+    $usuarios->bindParam(':email',$email);
+    $usuarios->bindParam(':pass',$password);
+    $usuarios->execute();
+
+    if(!empty($usuarios)){
+        $stmt=$conexion->prepare("SELECT COUNT(*) FROM USUARIOS WHERE EMAIL=:email AND PASS=:pass");
+        $stmt->bindParam(':email',$email);
+        $stmt->bindParam(':pass',$password);
+        $stmt->execute();
+
+        $rows = $stmt->fetchColumn();
+
+        if($rows == 1){
+            $datos = $usuarios->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['usuario'] = $datos;
+            echo json_encode(array('error' => false, 'tipo' => $datos['TIPO']));
+        }else{
+            echo json_encode(array('error' => true));
+        }
+    }
+
+cerrarConexionBD($conexion);
+
+ ?>

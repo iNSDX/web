@@ -1,46 +1,37 @@
-/*INCLUIR EN INDEX.php
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
-<script src="js/validacionRegistro.js"></script>
-*/
-function accountExists () {
-  var email=$("#email").val();
+function accountExists() {
+  var email=document.getElementById("email").value;
   $.ajax({
       type:'post',
-          url:'php/checkEmail.php',
-          data:{email: email},
-          success:function(msg){
-          alert(msg);
-          }
+      url:'php/checkEmail.php',
+      data:'email='+email,
+      success:function(msg){
+            $('#emnotav').html(msg);
+            if(!($('#emnotav').is(':empty'))){
+              $('#email').closest('.form-group').removeClass('has-success');
+              $('#email').closest('.form-group').addClass('has-error has-feedback');
+              $('#emnotav').addClass('help-block-red');
+            }
+      }
    });
 }
-
-
 
 $(function() {
 
   $.validator.setDefaults({
     errorClass: 'help-block',
     highlight: function(element) {
-      $(element)
-        //.closest('.form-group')
-        .removeClass('has-success');
-        .addClass('has-error has-feedback');
-        .blur(function(){
-        $("#iconok").remove();
-        });
-        .append('<span id="iconwrong" class="glyphicon glyphicon-remove form-control-feedback"></span>');
+      var closestdiv = $(element).closest('.form-group');
+      closestdiv.removeClass('has-success');
+      closestdiv.addClass('has-error has-feedback');
+    //  closestdiv.children('span').eq(0).removeClass('glyphicon-ok');
+    //  closestdiv.children('span').eq(0).addClass('glyphicon-remove');
     },
     unhighlight: function(element) {
-      $(element)
-        //.closest('.form-group')
-        .removeClass('has-error');
-        .addClass('has-success has-feedback');
-        .blur(function(){
-        $("#iconwrong").remove();
-        });
-        .append('<span id="iconok" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+      var closestdiv2 = $(element).closest('.form-group');
+      closestdiv2.removeClass('has-error');
+      closestdiv2.addClass('has-success has-feedback');
+    //  closestdiv2.children('span').eq(0).removeClass('glyphicon-remove');
+    //  closestdiv2.children('span').eq(0).addClass('glyphicon-ok');
     },
     errorPlacement: function (error, element) {
       if (element.prop('type') === 'checkbox') {
@@ -53,17 +44,17 @@ $(function() {
 
   $.validator.addMethod('strongPassword', function(value, element) {
     return this.optional(element)
-      || value.length >= 6
+      || value.length >= 8
       && /\d/.test(value)
       && /[A-Z]/.test(value)
       && /[a-z]/i.test(value);
-  }, 'La contraseña debe tener al menos 6 caracteres y contener al menos un número,una minúscula y una mayúscula\'.')
+  }, 'La contraseña debe tener al menos 8 caracteres y contener al menos un dígito, una minúscula y una mayúscula.')
 
   $("#register-form").validate({
     rules: {
       email: {
         required: true,
-        email: true,
+        email: true
       },
       password: {
         required: true,
@@ -71,6 +62,7 @@ $(function() {
       },
       password_confirmation: {
         required: true,
+        strongPassword: true,
         equalTo: '#password'
       },
       nombre: {
@@ -83,28 +75,28 @@ $(function() {
       },
       fechaNacimiento: {
         required: true
-      },
+      }
     },
     messages: {
       email: {
         required: 'Rellene este campo.',
         email: 'Por favor introduzca un email <em>válido</em>.'
-      }
+      },
       password: {
         required: 'Rellene este campo.',
-      }
+      },
       password_confirmation: {
         required: 'Rellene este campo.',
         equalTo: 'Contraseña no coincide.'
-      }
+      },
       nombre: {
         required: 'Rellene este campo.',
         lettersonly: 'Nombre no válido.'
-      }
+      },
       apellidos: {
         required: 'Rellene este campo.',
         lettersonly: 'Apellidos no válidos.'
-      }
+      },
       fechaNacimiento: {
         required: 'Rellene este campo.'
       }

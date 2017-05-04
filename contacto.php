@@ -1,5 +1,6 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +27,7 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA"></script>
 	<script src="js/google_map.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
@@ -53,14 +54,18 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!--Validacion Contacto-->
+	<!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>-->
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
+	<script src="js/validacionContacto.js"></script>
+
 	</head>
 	<body>
 
-
-
 	<div id="page">
 
-		<?php include_once("includes/cabecera.php")?>
+		<?php include_once("includes/cabecera.php") ?>
 
 		<div id="map" class="fh5co-map"></div>
 
@@ -74,49 +79,31 @@
 						<ul>
 							<li class="address">Calle Virgen de los Remedios Nº50, <br> Ibros (Jaén) 23450</li>
 							<li class="phone"><a>+ 123 456 789</a></li>
-							<li class="email"><a href="mailto:gestion@estanco.com">gestion@estanco.com</a></li>
+							<li class="email"><a href="mailto:gestanco@protonmail.com">gestanco@protonmail.com</a></li>
 						</ul>
 					</div>
 
 				</div>
 				<div class="col-md-6 animate-box">
 					<h3>¡Contacta con nosotros!</h3>
-					<form action="#">
+					<form id="contact-form" action="php/procesar_contacto.php" method="post">
 						<div class="row form-group">
-							<div class="col-md-6">
-								<!-- <label for="fname">Nombre</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Nombre">
-							</div>
-							<div class="col-md-6">
-								<!-- <label for="lname">Apellidos</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Apellidos">
-							</div>
+							<input type="text" id="fname" name="fname" class="form-control" placeholder="Nombre" required>
+						</div>
+						<div class="row form-group">
+							<input type="text" id="lname" name="lname" class="form-control" placeholder="Apellidos" required>
 						</div>
 
 						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Email">
-							</div>
+							<input type="text" id="email" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" placeholder="Email" required>
 						</div>
 
 						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="phone">Teléfono</label> -->
-								<input type="text" id="phone" class="form-control" placeholder="Teléfono">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="message">Mensaje</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje. Le responderemos lo antes posible. Gracias :)"></textarea>
-							</div>
+							<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje. Le responderemos lo antes posible. Gracias :)" required></textarea>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Enviar" class="btn btn-primary">
+							<input type="submit" name="submit" value="Enviar" class="btn btn-primary">
 						</div>
-
 					</form>
 				</div>
 			</div>
@@ -126,8 +113,6 @@
 
 
 	<?php include_once("includes/pie.php") ?>
-
-
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

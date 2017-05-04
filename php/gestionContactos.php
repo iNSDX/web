@@ -22,7 +22,7 @@ function consultarTodosContactos($conexion) {
      $stmt->bindParam(':nombre',$contacto["nombre"]);
      $stmt->bindParam(':ape',$contacto["apellidos"]);
      $stmt->bindParam(':email',$contacto["email"]);
-     $stmt->bindParam(':pass',$contacto["mensaje"]);
+     $stmt->bindParam(':mensaje',$contacto["mensaje"]);
      $stmt->execute();
      return true;
 
