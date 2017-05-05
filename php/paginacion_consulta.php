@@ -19,7 +19,7 @@ function consulta_paginada( $conn, $query, $pag_num, $pag_size )
 	}
 	catch ( PDOException $e ) {
 		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: ../error.php");
+		header("Location: php/error.php");
 	}
 }
 
@@ -35,7 +35,7 @@ function total_consulta_elementos( $conn, $query )
 	}
 	catch ( PDOException $e ) {
 		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: ../error.php");
+		header("Location: php/error.php");
 	}
 }
 ?>

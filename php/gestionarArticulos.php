@@ -14,43 +14,43 @@ function consultarTodosArticulos($conexion) {
      	    return $conexion->query($consulta);
      	}catch(PDOException $e){
      		$_SESSION['excepcion'] = $e->GetMessage();
-     		header("Location: ../error.php");
+     		header("Location: php/error.php");
      	}
 }
 
 function consultarListaArticulosFamilia($conexion,$familia) {
 
-	$consulta = "SELECT * FROM ARTICULOS WHERE ARTICULOS.nombreFamilia=$familia ORDER BY TIPO";
+	$consulta = "SELECT * FROM ARTICULOS WHERE NOMBREFAMILIA=".$familia." ORDER BY TIPO";
 
 	try {
 	    return $conexion->query($consulta);
 	}catch(PDOException $e){
 		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: ../error.php");
+		header("Location: php/error.php");
 	}
 }
 
 function consultarListaArticulosSubfamilia($conexion,$familia,$subFamilia) {
 
-	$consulta = "SELECT * FROM ARTICULOS WHERE (ARTICULOS.nombreFamilia=$familia AND ARTICULOS.nombreSubfamilia=$subFamilia) ORDER BY NOMBRE";
+	$consulta = "SELECT * FROM ARTICULOS WHERE (NOMBREFAMILIA=".$familia." AND NOMBRESUBFAMILIA=".$subfamilia.") ORDER BY NOMBRE";
 
 	try {
 	    return $conexion->query($consulta);
 	}catch(PDOException $e){
 		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: ../error.php");
+		header("Location: php/error.php");
 	}
 }
 
 function consultarArticulo($conexion,$nombreArticulo) {
 
-	$consulta = "SELECT * FROM ARTICULOS WHERE (ARTICULOS.nombre=$nombreArticulo) ORDER BY NOMBRE";
+	$consulta = "SELECT * FROM ARTICULOS WHERE (NOMBRE=".$nombreArticulo.") ORDER BY NOMBRE";
 
 	try {
 	    return $conexion->query($consulta);
 	}catch(PDOException $e){
 		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: ../error.php");
+		header("Location: php/error.php");
 	}
 }
 
