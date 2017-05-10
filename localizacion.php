@@ -2,11 +2,6 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<!--Validacion Contacto-->
-		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
-		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
-		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
-		<script src="js/validacionContacto.js"></script>
 
 		 <?php include_once("includes/meta.php"); ?>
 

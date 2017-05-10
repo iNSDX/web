@@ -54,10 +54,6 @@ function consultarArticulo($conexion,$nombreArticulo) {
 	}
 }
 
-function getidFoto($conexion,$idArticulo){
-    return ../images/imagenArticulo/$idArticulo."jpg";
-}
-
 function quitar_articulo($conexion,$idArticulo) {
 	try {
 		$stmt=$conexion->prepare('CALL DEL_ARTICULO(:idArticulo)');
