@@ -1,123 +1,81 @@
 <?php session_start(); ?>
 <!DOCTYPE HTML>
-<html lang="es">
+<html>
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Estanco Nº1 &mdash; Ibros (Jaén)</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Validacion Contacto-->
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
+		<script src="js/validacionContacto.js"></script>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA"></script>
-	<script src="js/google_map.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
+		 <?php include_once("includes/meta.php"); ?>
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	  </head>
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Pricing -->
-	<link rel="stylesheet" href="css/pricing.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!--Validacion Contacto-->
-	<!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>-->
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
-	<script src="js/validacionContacto.js"></script>
+		<body>
+				 <?php
+					include_once("includes/header.php");
+				 ?>
 
-	</head>
-	<body>
+					<div class="wrapper style1">
+				    <div class="container">
+				      <article id="main" class="special">
+				        <header>
+				          <h2><a href="#">Expendeduría Nº1 de Ibros</a></h2>
+				          <p>
+				            Jaén
+				          </p>
+				          </header>
 
-	<div id="page">
 
-		<?php include_once("includes/cabecera.php") ?>
+				<!--	<div class="row">
+						<section class="container">
+							<div id="map" class="fh5co-map"></div>
+						</section>
+					</div>-->
 
-		<div id="map" class="fh5co-map"></div>
+						<div class="row">
+							<section class="8u 12u(mobile) special">
+								<header id="Titulo"> <h1>¡Contacta con nosotros! </h1> </header>
+								<form id="contact-form" method="post" action="php/procesar_contacto.php">
+									<div class="field half first form-group">
+										<input type="text" id="fname" name="fname" class="form-control" placeholder="Nombre" required></div>
+									<div class="field half first form-group">
+										<input type="text" id="lname" name="lname" class="form-control" placeholder="Apellidos" required>
+									</div>
+									<div class="field half form-group">
+										<input type="text" id="email" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" placeholder="Email" required>
+									</div>
+									<div class="field form-group">
+										<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje. Le responderemos lo antes posible. Gracias :)" required></textarea>
+									</div>
+									<!-- CAMBIAR ESTO A UN DIV CON LAS MISMAS CLASES -->
+									<ul class="actions form-group">
+										<!-- CAMBIAR ESTO A INPUT TIPO BOTON CON LAS MISMAS CLASES -->
+										<li><a href="" class="button submit">Enviar</a></li>
+									</ul>
+								</form>
+							</section>
 
-	<div id="fh5co-contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 col-md-push-1 animate-box">
-
-					<div class="fh5co-contact-info">
-						<h3>¡Ven a visitarnos!</h3>
-						<ul>
-							<li class="address">Calle Virgen de los Remedios Nº50, <br> Ibros (Jaén) 23450</li>
-							<li class="phone"><a>+ 123 456 789</a></li>
-							<li class="email"><a href="mailto:gestanco@protonmail.com">gestanco@protonmail.com</a></li>
-						</ul>
-					</div>
-
+							<section class="3u 12u(mobile) special">
+								<header id="Titulo"> <h1>¿Hablamos? </h1> </header>
+								<ul class="contact">
+									<li>
+										<h3>Email</h3>
+										<a href="mailto:gestanco@protonmail.com">gestanco@protonmail.com</a>
+									</li>
+									<li>
+										<br>
+										<h3>Teléfono</h3>
+										<span>953 76 60 94</span>
+									</li>
+								</ul>
+							</section>
 				</div>
-				<div class="col-md-6 animate-box">
-					<h3>¡Contacta con nosotros!</h3>
-					<form id="contact-form" action="php/procesar_contacto.php" method="post">
-						<div class="row form-group">
-							<input type="text" id="fname" name="fname" class="form-control" placeholder="Nombre" required>
-						</div>
-						<div class="row form-group">
-							<input type="text" id="lname" name="lname" class="form-control" placeholder="Apellidos" required>
-						</div>
-
-						<div class="row form-group">
-							<input type="text" id="email" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" placeholder="Email" required>
-						</div>
-
-						<div class="row form-group">
-							<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje. Le responderemos lo antes posible. Gracias :)" required></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" name="submit" value="Enviar" class="btn btn-primary">
-						</div>
-					</form>
-				</div>
-			</div>
-
-		</div>
-	</div>
 
 
-	<?php include_once("includes/pie.php") ?>
+			<?php include_once("includes/footer.php"); ?>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
 
-	</div>
-</body>
+	</body>
 </html>

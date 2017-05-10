@@ -28,6 +28,7 @@ $password=$_POST['passlg'];
         if($rows == 1){
             $datos = $usuarios->fetch(PDO::FETCH_ASSOC);
             $_SESSION['usuario'] = $datos;
+            $_SESSION['conectado'] = true;
             echo json_encode(array('error' => false, 'tipo' => $datos['TIPO']));
         }else{
             echo json_encode(array('error' => true));
