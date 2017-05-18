@@ -6,8 +6,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<?php include_once("includes/links.php") ?>
-		
+		<?php include_once("../includes/links.php") ?>
+
 	</head>
 	<body>
 
@@ -31,7 +31,7 @@
                       <!-- Search -->
         								<section id="search" class="alt">
         									<form method="post" action="#">
-        										<input type="text" name="query" id="query" placeholder="Buscar producto" />
+        										<input type="text" name="query" id="query" placeholder="Buscar producto..." />
         									</form>
         								</section>
 
@@ -48,7 +48,7 @@
 						</div>
 					</div>
 
-				<?php include_once("includes/sidebar.php") ?>
+				<?php include_once("../includes/sidebar_e.php") ?>
 
 			</div>
 

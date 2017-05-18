@@ -1,3 +1,15 @@
+<?php
+    /*session_start();
+
+    if(isset($_SESSION['usuario'])){
+        if($_SESSION['usuario']['TIPO'] != 'Empleado'){
+            header('Location: ../');
+        }
+    }else{
+        header('Location: ../');
+    } */
+ ?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -6,7 +18,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<?php include_once("includes/links.php") ?>
+		<?php include_once("../includes/links.php") ?>
 	</head>
 	<body>
 
@@ -39,7 +51,7 @@
 						</div>
 					</div>
 
-					<?php include_once("includes/sidebar.php") ?>
+					<?php include_once("../includes/sidebar_e.php") ?>
 
 			</div>
 

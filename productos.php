@@ -22,30 +22,30 @@
 
 						<div class="row">
 							<article class="3u 12u(mobile) special">
-								<a href="cigarrillos.php" class="image featured"><img src="images/tabaco.jpg" alt="" /></a>
+								<a href="tabaco.php" class="image featured"><img src="images/tabaco.jpg" alt="tabaco" /></a>
 								<header>
-									<h3><a href="cigarrillos.php">Tabaco</a></h3>
+									<h3><a href="tabaco.php">Tabaco</a></h3>
 								</header>
 							</article>
 
 							<article class="3u 12u(mobile) special">
-								<a href="picadura.php" class="image featured"><img src="images/comestibles.jpg" alt="" /></a>
+								<a href="comestibles.php" class="image featured"><img src="images/comestibles.jpg" alt="comida" /></a>
 								<header>
-									<h3><a href="picadura.php">Comestibles</a></h3>
+									<h3><a href="comestibles.php">Comestibles</a></h3>
 								</header>
 
 							</article>
 							<article class="3u 12u(mobile) special">
-								<a href="puros.php" class="image featured"><img src="images/papeleria.jpg" alt="" /></a>
+								<a href="papeleria.php" class="image featured"><img src="images/papeleria.jpg" alt="papeleria" /></a>
 								<header>
-									<h3><a href="puros.php">Papelería</a></h3>
+									<h3><a href="papeleria.php">Papelería</a></h3>
 								</header>
 
 							</article>
 							<article class="3u 12u(mobile) special">
-								<a href="mascar.php" class="image featured"><img src="images/otros.jpg" alt="" /></a>
+								<a href="otros.php" class="image featured"><img src="images/otros.jpg" alt="others" /></a>
 								<header>
-									<h3><a href="mascar.php">Otros</a></h3>
+									<h3><a href="otros.php">Otros</a></h3>
 								</header>
 
 							</article>

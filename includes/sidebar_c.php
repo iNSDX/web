@@ -14,7 +14,7 @@
           <li><a href="facturas.php">Facturas</a></li>
           <li><a href="arqueo.php">Arqueo Caja</a></li>
           <li><a href="inventario.php">Inventario</a></li>
-          <li><a href="#">Cerrar Sesión</a></li>
+          <li><a href="logout.php">Cerrar Sesión</a></li>
         </ul>
       </nav>
 
