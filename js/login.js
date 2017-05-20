@@ -13,15 +13,7 @@ jQuery(document).on('submit', '#formlg', function(event) {
     .done(function(respuesta) {
       console.log(respuesta);
       if(!respuesta.error){
-        if(respuesta.tipo == 'Propietario'){
-          location.href = 'Propietario/';
-        }else if(respuesta.tipo == 'Cliente'){
-          location.href = 'Cliente/';
-        }else if(respuesta.tipo == 'Gerente'){
-          location.href = 'Gerente/';
-        }else if(respuesta.tipo == 'Empleado'){
-          location.href = 'Empleado/';
-        }
+          location.href = 'exito_login.php';
       }else{
         $('.error').slideDown('slow');
         setTimeout(function() {
