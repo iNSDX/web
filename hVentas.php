@@ -1,5 +1,15 @@
 <?php
+
 session_start();
+
+if(isset($_SESSION['usuario'])){
+	if($_SESSION['usuario']['TIPO'] == 'Cliente'){
+		header('Location: index.php');
+	}
+}else{
+	header('Location: index.php');
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -9,7 +19,7 @@ session_start();
 		<title>Gestión Estanco</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<?php include_once("includes/links.php") ?>
+		<?php include_once("includes/links.php"); ?>
 		<script src="js/busquedaventa.js"></script>
 
 	</head>
@@ -48,9 +58,7 @@ session_start();
 											<?php   }
 												} ?>
 											</div>
-											<div id="datos">
 
-											</div>
         								</section>
 										<div id="add_data_Modal" class="modal fade">
 										    <div class="modal-dialog">
@@ -94,10 +102,14 @@ session_start();
 									</span>
 								</section>
 
+								<div id="datos">
+
+								</div>
+
 						</div>
 					</div>
 
-				<<?php include_once("includes/sidebar.php") ?>
+				<?php include_once("includes/sidebar.php"); ?>
 
 			</div>
 

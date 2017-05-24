@@ -59,7 +59,7 @@ $conexion = crearConexionBD();
 
     <?php
     }else{
-        echo "No se encontraron ventas con sus criterios de búsqueda.";
+        echo "No se encontraron facturas con sus criterios de búsqueda.";
     }
 
 cerrarConexionBD($conexion);

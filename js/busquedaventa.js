@@ -37,11 +37,10 @@ $(document).on('submit', '#insert_venta_form', function(event) {
         success:function(data){
           $('#insert_venta_form')[0].reset();
           $('#add_data_Modal').modal('hide');
-          $('#datos').html(data);
           $('.artadded').slideDown('slow');
           setTimeout(function() {
-            $('.artadded').slideUp('slow');
-          },2000);
+            window.location.reload(true);
+          },1500);
         }
       });
   });
@@ -56,9 +55,7 @@ function updateData(str) {
       success: function(){
           $('.artupdated').slideDown('slow');
           setTimeout(function() {
-            window.setTimeout(function() {
-                window.location.replace('hventas.php');
-            });
+            window.location.reload(true);
           },1500);
       }
     });
@@ -74,9 +71,7 @@ function deleteData(str){
     success: function() {
       $('.artdeleted').slideDown('slow');
       setTimeout(function() {
-        window.setTimeout(function() {
-            window.location.replace('hventas.php');
-        });
+        window.location.reload(true);
       },1500);
     }
   });

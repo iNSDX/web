@@ -1,5 +1,15 @@
 <?php
+
 session_start();
+
+if(isset($_SESSION['usuario'])){
+	if($_SESSION['usuario']['TIPO'] == 'Cliente'){
+		header('Location: index.php');
+	}
+}else{
+	header('Location: index.php');
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -38,9 +48,7 @@ session_start();
 												<label for="caja_busqueda">Buscar:</label>
 												<input type="text" name="caja_busqueda" id="caja_busqueda"/>
 											</div>
-											<div id="datos">
 
-											</div>
         								</section>
 
 										</header>
@@ -49,6 +57,10 @@ session_start();
 									<span class="image object">
 									</span>
 								</section>
+
+								<div id="datos">
+
+								</div>
 
 						</div>
 					</div>

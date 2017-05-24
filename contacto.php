@@ -27,13 +27,6 @@
 				          </p>
 				          </header>
 
-
-				<!--	<div class="row">
-						<section class="container">
-							<div id="map" class="fh5co-map"></div>
-						</section>
-					</div>-->
-
 						<div class="row">
 							<section class="8u 12u(mobile) special">
 								<header id="Titulo"> <h1>¡Contacta con nosotros! </h1> </header>
@@ -52,7 +45,7 @@
 									<!-- CAMBIAR ESTO A UN DIV CON LAS MISMAS CLASES -->
 									<ul class="actions form-group">
 										<!-- CAMBIAR ESTO A INPUT TIPO BOTON CON LAS MISMAS CLASES -->
-										<li><a href="" class="button submit">Enviar</a></li>
+										<li><input type="submit" class="button submit" value="Enviar"></li>
 									</ul>
 								</form>
 							</section>

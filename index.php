@@ -1,18 +1,7 @@
 <?php
     session_start();
-
-    if(isset($_SESSION['usuario'])){
-        if($_SESSION['usuario']['TIPO'] == 'Propietario'){
-            header('Location: Propietario/');
-        }else if($_SESSION['usuario']['TIPO'] == 'Gerente'){
-            header('Location: Gerente/');
-        }else if($_SESSION['usuario']['TIPO'] == 'Empleado'){
-            header('Location: Empleado/');
-        }else if($_SESSION['usuario']['TIPO'] == 'Cliente'){
-            header('Location: Cliente/');
-        }
-    }
  ?>
+ 
  <!DOCTYPE HTML>
  <html>
    <head>
