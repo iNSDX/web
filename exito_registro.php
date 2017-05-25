@@ -26,5 +26,5 @@
 <script language="javascript">
 window.setTimeout(function() {
     window.location.replace('index.php');
-}, 2500);
+}, 1700);
 </script>

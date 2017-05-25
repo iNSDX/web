@@ -23,15 +23,11 @@ $(function() {
       var closestdiv = $(element).closest('.form-group');
       closestdiv.removeClass('has-success');
       closestdiv.addClass('has-error has-feedback');
-    //  closestdiv.children('span').eq(0).removeClass('glyphicon-ok');
-    //  closestdiv.children('span').eq(0).addClass('glyphicon-remove');
     },
     unhighlight: function(element) {
       var closestdiv2 = $(element).closest('.form-group');
       closestdiv2.removeClass('has-error');
       closestdiv2.addClass('has-success has-feedback');
-    //  closestdiv2.children('span').eq(0).removeClass('glyphicon-remove');
-    //  closestdiv2.children('span').eq(0).addClass('glyphicon-ok');
     },
     errorPlacement: function (error, element) {
       if (element.prop('type') === 'checkbox') {
