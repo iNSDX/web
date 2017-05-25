@@ -2,11 +2,8 @@
 
 session_start();
 
-if(isset($_SESSION['usuario'])){
-	if($_SESSION['usuario']['TIPO'] == 'Cliente'){
-		header('Location: indexinterno.php');
-	}
-}else{
+if(!isset($_SESSION['usuario'])){
+
 	header('Location: index.php');
 }
 
@@ -19,16 +16,13 @@ if(isset($_SESSION['usuario'])){
 		<title>Gestión Estanco</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<?php include_once("includes/links.php"); ?>
-		<script src="js/busquedacontacto.js"></script>
 
+		<?php include_once("includes/links.php"); ?>
 	</head>
 	<body>
 
-	    <div class="artdeleted"><span>Contacto borrado correctamente</span></div>
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
@@ -41,29 +35,23 @@ if(isset($_SESSION['usuario'])){
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>CONTACTOS<br /></h1>
-                      <!-- Search -->
-        								<section id="search" class="alt principal">
-											<div class="form-1-2">
-												<label for="caja_busqueda">Buscar:</label>
-												<input type="text" name="caja_busqueda" id="caja_busqueda"/>
-											</div>
-        								</section>
+											<h1>Hola, <?php echo $_SESSION['usuario']['NOMBRE']; ?><br /></h1>
+										<!-- PONER AQUI TEXTO DEPENDIENDO DE TIPO USUARIO	<p>Esta es la interfaz de Propietario.</p>-->
 										</header>
-										<p></p>
+										<!-- PONER AQUI TEXTO DEPENDIENDO DE TIPO USUARIO
+                                        <p>Tendrá libre acceso a toda la base de datos y no tendrá restricción en hacer ninguna operación.</p>
+										<ul class="actions">
+											<li><a href="albaran.php" class="button big">Mirar Albarán</a></li>
+										</ul>-->
 									</div>
 									<span class="image object">
 									</span>
 								</section>
 
-                                <div id="datos">
-
-                                </div>
-
 						</div>
 					</div>
 
-				<?php include_once("includes/sidebar.php"); ?>
+					<?php include_once("includes/sidebar.php"); ?>
 
 			</div>
 

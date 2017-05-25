@@ -12,14 +12,8 @@
 
        <?php
           if(isset($_SESSION['usuario'])){ ?>
-              <li>
-    			<span class="opener"> Inventario </span>
 
-                <ul>
-    				<li><a href="inventario.php">Stock</a></li>
-    			</ul>
-
-              </li>
+    		<li><a href="inventario.php">Artículos</a></li>
 
     <?php 	if($_SESSION['usuario']['TIPO'] != 'Cliente'){ ?>
             <li>
@@ -27,20 +21,18 @@
 
                 <ul>
                     <li><a href="hVentas.php">Ventas</a></li>
-
+                    <li><a href="facturas.php">Facturas</a></li>
                 </ul>
             </li>
-            <li><a href="facturas.php">Facturas</a></li>
+
             <li><a href="arqueo.php">Arqueo Caja</a></li>
       <?php } ?>
 
-    <?php 	if($_SESSION['usuario']['TIPO'] == 'Gerente' || $_SESSION['usuario']['TIPO'] == 'Propietario'){ ?>
-            <li>
-                <span class="opener"> Pedido </span>
-                <ul>
-                    <li><a href="albaran.php">Albarán</a></li>
-                </ul>
-            </li>
+    <?php 	if($_SESSION['usuario']['TIPO'] != 'Cliente'){ ?>
+
+            <li><a href="albaran.php">Pedidos</a></li>
+            <li><a href="vercontactos.php">Contactos</a></li>
+
       <?php } ?>
 
        <li><a href="logout.php">Cerrar Sesión</a></li>
@@ -48,7 +40,7 @@
 
         </ul>
       </nav>
-      
+
 
     <!-- Footer -->
       <footer id="footer">

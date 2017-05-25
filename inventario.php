@@ -18,8 +18,7 @@ if(!isset($_SESSION['usuario'])){
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<?php include_once("includes/links.php"); ?>
-			<script src="js/busqueda.js"></script>
-			<script src="js/editinline.js"></script>
+			<script src="js/busquedaarticulo.js"></script>
 
 
 	</head>
@@ -35,8 +34,7 @@ if(!isset($_SESSION['usuario'])){
 						<div class="inner">
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
-
+									<a href="indexinterno.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
 								</header>
 
 							<!-- Banner -->

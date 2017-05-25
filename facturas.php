@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_SESSION['usuario'])){
 	if($_SESSION['usuario']['TIPO'] == 'Cliente'){
-		header('Location: index.php');
+		header('Location: indexinterno.php');
 	}
 }else{
 	header('Location: index.php');
@@ -19,7 +19,7 @@ if(isset($_SESSION['usuario'])){
 		<title>Gestión Estanco</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<?php include_once("includes/links.php") ?>
+		<?php include_once("includes/links.php"); ?>
 	    <script src="js/busquedafactura.js"></script>
 
 	</head>
@@ -33,8 +33,7 @@ if(isset($_SESSION['usuario'])){
 						<div class="inner">
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
-
+									<a href="indexinterno.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
 								</header>
 
 							<!-- Banner -->
@@ -65,7 +64,7 @@ if(isset($_SESSION['usuario'])){
 						</div>
 					</div>
 
-				<?php include_once("includes/sidebar.php") ?>
+				<?php include_once("includes/sidebar.php"); ?>
 
 			</div>
 

@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_SESSION['usuario'])){
 	if($_SESSION['usuario']['TIPO'] == 'Cliente'){
-		header('Location: index.php');
+		header('Location: indexinterno.php');
 	}
 }else{
 	header('Location: index.php');
@@ -35,8 +35,7 @@ if(isset($_SESSION['usuario'])){
 						<div class="inner">
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
-
+									<a href="indexinterno.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
 								</header>
 
 							<!-- Banner -->
