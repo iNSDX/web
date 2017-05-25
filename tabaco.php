@@ -42,14 +42,6 @@
 								</header>
 
 							</article>
-							<article class="3u 12u(mobile) special">
-								<a href="mascar.php" class="image featured"><img src="images/mascar.jpg" alt="" /></a>
-								<header>
-									<h3><a href="mascar.php">De mascar</a></h3>
-								</header>
-
-							</article>
-
 
 				</div>
 

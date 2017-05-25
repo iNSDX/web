@@ -46,7 +46,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Gestión de biblioteca: Lista de Libros</title>
+  <title>Gestión Estanco - Artículos</title>
 </head>
 
 <body>

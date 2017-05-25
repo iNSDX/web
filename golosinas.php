@@ -20,9 +20,9 @@
 
 	$conexion = crearConexionBD();
 
-	$palabra = 'puros';
+	$palabra = 'golosinas';
 	// La consulta que ha de paginarse
-	$query = "SELECT * FROM ARTICULOS WHERE NOMBRESUBFAMILIA='".$palabra."'";
+	$query = "SELECT * FROM ARTICULOS WHERE NOMBREFAMILIA='".$palabra."'";
 
 	// Se comprueba que el tamaño de página, página seleccionada y total de registros son conformes.
 	// En caso de que no, se asume el tamaño de página propuesto, pero desde la página 1

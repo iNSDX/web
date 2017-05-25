@@ -34,6 +34,12 @@
 									<h3><a href="comestibles.php">Comestibles</a></h3>
 								</header>
 
+							<article class="3u 12u(mobile) special">
+								<a href="golosinas.php" class="image featured"><img src="images/golosinas.jpg" alt="chuches" /></a>
+								<header>
+									<h3><a href="golosinas.php">Golosinas</a></h3>
+								</header>
+
 							</article>
 							<article class="3u 12u(mobile) special">
 								<a href="papeleria.php" class="image featured"><img src="images/papeleria.jpg" alt="papeleria" /></a>
