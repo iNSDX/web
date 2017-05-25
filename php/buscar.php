@@ -35,10 +35,11 @@ $conexion = crearConexionBD();
     if($numrows > 0){ ?>
         <table class='tabla_datos table table-condensed table-hover table-striped bootgrid-table' cellspacing='0'>
                     <thead>
-                        <tr>
+                        <tr><th>ID</th>
                             <th>Nombre</th>
                             <th>Familia</th>
                             <th>Precio €</th>
+                            <th>Subfamilia</th>
 
                             <?php
                             if(isset($_SESSION['usuario'])){ ?>
@@ -52,9 +53,16 @@ $conexion = crearConexionBD();
         while($fila = $result->fetch(PDO::FETCH_ASSOC)){
             ?>
             <tr>
+                <?php
+                if(isset($_SESSION['usuario'])){
+                    if($_SESSION['usuario']['TIPO'] != 'Cliente'){ ?>
+                <td><?php echo $fila['IDARTICULO']; ?></td>
+                <?php }
+                   } ?>
                 <td><?php echo $fila['NOMBRE']; ?></td>
                 <td><?php echo $fila['NOMBREFAMILIA']; ?></td>
                 <td><?php echo $fila['PRECIOVENTA']; ?></td>
+                <td><?php echo $fila['NOMBRESUBFAMILIA']; ?></td>
 
                 <?php
                 if(isset($_SESSION['usuario'])){

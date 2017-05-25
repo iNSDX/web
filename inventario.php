@@ -18,8 +18,7 @@ if(!isset($_SESSION['usuario'])){
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<?php include_once("includes/links.php"); ?>
-			<script src="js/busqueda.js"></script>
-			<script src="js/editinline.js"></script>
+			<script src="js/busquedaarticulo.js"></script>
 
 
 	</head>
@@ -35,15 +34,14 @@ if(!isset($_SESSION['usuario'])){
 						<div class="inner">
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
-
+									<a href="indexinterno.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
 								</header>
 
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>INVENTARIO<br /></h1>
+											<h1>ARTÍCULOS<br /></h1>
                       <!-- Search -->
         								<section id="search" class="alt">
 
@@ -53,8 +51,8 @@ if(!isset($_SESSION['usuario'])){
 												<?php
 												if(isset($_SESSION['usuario'])){
 													if($_SESSION['usuario']['TIPO'] == 'Propietario' || $_SESSION['usuario']['TIPO'] == 'Gerente'){ ?>
-														<button type="button" name="add" id="add" data-toggle="modal"
-														 data-target="#add_data_Modal" class="btn btn-warning">Nuevo Artículo</button>
+														<button type="button.big" name="add" id="add" data-toggle="modal"
+														 data-target="#add_data_Modal" class="button">Nuevo Artículo</button>
 											<?php   }
 												} ?>
 											</div>
@@ -64,7 +62,7 @@ if(!isset($_SESSION['usuario'])){
 										    <div class="modal-dialog">
 										        <div class="modal-content">
 										            <div class="modal-header">
-										                <button type="button" class="close" data-dismiss="modal">&times;</button>
+										                <button type="button" class="button" data-dismiss="modal">&times;</button>
 										                <h4 class="modal-title">Añadir artículo</h4>
 										            </div>
 										            <div class="modal-body">
@@ -153,7 +151,7 @@ if(!isset($_SESSION['usuario'])){
 										                </form>
 										            </div>
 										            <div class="modal-footer">
-										                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+										                <button type="button" class="button" data-dismiss="modal">Cerrar</button>
 										            </div>
 										        </div>
 										    	</div>

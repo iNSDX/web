@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_SESSION['usuario'])){
 	if($_SESSION['usuario']['TIPO'] == 'Cliente'){
-		header('Location: index.php');
+		header('Location: indexinterno.php');
 	}
 }else{
 	header('Location: index.php');
@@ -35,8 +35,7 @@ if(isset($_SESSION['usuario'])){
 						<div class="inner">
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
-
+									<a href="indexinterno.php" class="logo"><strong><?php echo $_SESSION['usuario']['TIPO']; ?></strong> <?php echo $_SESSION['usuario']['NOMBRE']; ?></a>
 								</header>
 
 							<!-- Banner -->
@@ -53,8 +52,8 @@ if(isset($_SESSION['usuario'])){
 												if(isset($_SESSION['usuario'])){
 													if($_SESSION['usuario']['TIPO'] == 'Propietario' || $_SESSION['usuario']['TIPO'] == 'Gerente'){ ?>
 														<button type="button" name="addVenta" id="addVenta" data-toggle="modal"
-														 data-target="#add_data_Modal" class="btn btn-warning">Nueva venta</button>
-														<button onclick="location.href = 'facturas.php';" class="btn btn-info">Ver facturas</button>
+														 data-target="#add_data_Modal" class="button">Nueva venta</button>
+														<button onclick="location.href = 'facturas.php';" class="button">Ver facturas</button>
 											<?php   }
 												} ?>
 											</div>

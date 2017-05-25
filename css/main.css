@@ -61,6 +61,14 @@
 		font-weight: bold;
 		color: #8f1027;
 	}
+	#mn{
+		font-weight: bold;
+		color: green;
+	}
+	#desc{
+		font-weight: bold;
+		color: yellow;
+	}
 
 	#registro{
 		font-weight: bold;
@@ -1584,7 +1592,7 @@
 /* Basic */
 
 	body {
-		background: #f0f4f4;
+		background: #8f1027;
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;

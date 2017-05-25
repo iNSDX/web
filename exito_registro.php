@@ -14,10 +14,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="css/bootstrap.css" rel="stylesheet">
     <title>Registrado Correctamente</title>
 </head>
 <body>
-    <h2>Registrado correctamente, <a href="index.php">inicie sesión.</a></h2>
+    <h2>Registrado correctamente</h2>
+    <h4>en unos segundos se mostrará la página principal, si no es así haga click <a class="textogr" href="index.php"> aquí.</a></h4>
 </body>
 </html>
 

@@ -21,35 +21,27 @@
 						<hr />
 
 						<div class="row">
-							<article class="3u 12u(mobile) special">
+							<article class="4u 12u(mobile) special">
 								<a href="cigarrillos.php" class="image featured"><img src="images/cigarrillos.jpg" alt="" /></a>
 								<header>
 									<h3><a href="cigarrillos.php">Cigarrillos</a></h3>
 								</header>
 							</article>
 
-							<article class="3u 12u(mobile) special">
+							<article class="4u 12u(mobile) special">
 								<a href="picadura.php" class="image featured"><img src="images/liar.jpg" alt="" /></a>
 								<header>
 									<h3><a href="picadura.php">Picadura</a></h3>
 								</header>
 
 							</article>
-							<article class="3u 12u(mobile) special">
+							<article class="4u 12u(mobile) special">
 								<a href="puros.php" class="image featured"><img src="images/puros.jpg" alt="" /></a>
 								<header>
 									<h3><a href="puros.php">Puros</a></h3>
 								</header>
 
 							</article>
-							<article class="3u 12u(mobile) special">
-								<a href="mascar.php" class="image featured"><img src="images/mascar.jpg" alt="" /></a>
-								<header>
-									<h3><a href="mascar.php">De mascar</a></h3>
-								</header>
-
-							</article>
-
 
 				</div>
 

@@ -16,7 +16,8 @@
             <li id="registro"><a  data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();"><span>Regístrate</span></a></li>
         <?php } ?>
         <?php if (isset($_SESSION['conectado'])) {	?>
-            <li><a href="logout.php">Desconectar</a></li>
+              <li><a id="mn" href="indexinterno.php">Menú</a></li>
+            <li><a id="desc" href="logout.php">Desconectar</a></li>
         <?php } ?>
   </ul>
 </nav>

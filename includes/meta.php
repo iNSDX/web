@@ -15,4 +15,5 @@
     <link href="css/login-register.css" rel="stylesheet" />
 		<link href="css/register.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+		  <link href="css/w3.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css" />

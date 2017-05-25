@@ -13,7 +13,7 @@ jQuery(document).on('submit', '#formlg', function(event) {
     .done(function(respuesta) {
       console.log(respuesta);
       if(!respuesta.error){
-          location.href = 'exito_login.php';
+          location.href = 'indexinterno.php';
       }else{
         $('.error').slideDown('slow');
         setTimeout(function() {
