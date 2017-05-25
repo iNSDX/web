@@ -1,10 +1,4 @@
 <?php
-  /*
-     * #===========================================================#
-     * #	Este fichero contiene las funciones de gestión
-     * #	de contactos de la capa de acceso a datos
-     * #==========================================================#
-     */
 
 function consultarTodosContactos($conexion) {
      	$consulta = "SELECT * FROM CONTACTOS ORDER BY IDCONTACTO";

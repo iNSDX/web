@@ -22,7 +22,7 @@ require "gestionContactos.php";
 
 		if (count($errores)>0) {
 			$_SESSION["errores"] = $errores;
-			Header('Location: error.php');
+			Header('Location: ../error.php');
 		}else{
 			if(isset($_SESSION["contacto"]) && nuevo_contacto($conexion,$contacto)){
 				$_SESSION['contactook']= "Contacto mandado correctamente.";

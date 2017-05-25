@@ -18,7 +18,7 @@
 
 	$conexion = crearConexionBD();
 
-	$palabra = 'snacks';
+	$palabra = 'patatasFritas';
 
 	$query = "SELECT * FROM ARTICULOS WHERE NOMBRESUBFAMILIA='".$palabra."'";
 
@@ -104,7 +104,7 @@
 											 if ( $pagina == $pagina_seleccionada) { 	?>
 												 <a href="#" class="w3-bar-item w3-black w3-button"><?php echo $pagina; ?></a>
 									 <?php }	else { ?>
-												 <a href="consulta_articulos.php?PAG_NUM=<?php echo $pagina; ?>&PAG_TAM=<?php echo $pag_tam; ?>" class="w3-bar-item w3-button w3-hover-black"><?php echo $pagina; ?></a>
+												 <a href="snacks.php?PAG_NUM=<?php echo $pagina; ?>&PAG_TAM=<?php echo $pag_tam; ?>" class="w3-bar-item w3-button w3-hover-black"><?php echo $pagina; ?></a>
 									 <?php } ?>
 						     </div>
 						   </div>

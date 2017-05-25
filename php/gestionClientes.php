@@ -1,10 +1,5 @@
 <?php
-  /*
-     * #===========================================================#
-     * #	Este fichero contiene las funciones de gestión
-     * #	de usuarios de la capa de acceso a datos
-     * #==========================================================#
-     */
+
 
 function consultarTodosClientes($conexion) {
      	$consulta = "SELECT * FROM USUARIOS ORDER BY APELLIDOS, NOMBRE";
@@ -17,12 +12,6 @@ function consultarTodosClientes($conexion) {
 }
 
  function nuevo_cliente($conexion,$nuevoUsuario) {
-   // BUSCA LA OPERACIÓN ALMACENADA "INSERTAR_USUARIO" EN SQL
- 	// 			PARA SABER CUÁLES SON SUS PARÁMETROS.
- 	// RECUERDA QUE SE INVOCA MEDIANTE 'CALL' EN PL/SQL
- 	// RECUERDA QUE EL FORMATO DE FECHA PARA ORACLE ES "d/m/Y"
- 	// UTILIZA EL MÉTODO "PREPARE" DEL OBJETO PDO
- 	// RECUERDA EL TRY/CATCH
     $fechaNacimiento=date('d-m-Y',strtotime($nuevoUsuario["fechaNacimiento"]));
     try{
     $insert="INSERT INTO USUARIOS (IDCLIENTE,NOMBRE,APELLIDOS,FECHA_NACIMIENTO,EMAIL,PASS,ACEPTADO,TIPO) VALUES (sec_idcliente.NEXTVAL,:nombre,:ape,to_date('".$fechaNacimiento."','dd-mm-yy'),:email,:pass,'0','Cliente')";
@@ -39,12 +28,8 @@ function consultarTodosClientes($conexion) {
    }
 }
 
-// ESTA FUNCIÓN SE EDITA EN LA SEGUNDA PARTE DE LA PRÁCTICA
+
 function consultarCliente($conexion,$email,$pass) {
-	// SENTENCIA SELECT PARA CONTAR CUANTOS USUARIOS HAY
-	// 		CON DICHO EMAIL Y PASS
-	// UTILIZA EL MÉTODO "PREPARE" DEL OBJETO PDO
-	// RETORNE EL RESULTADO DEL MÉTODO "FETCHCOLUMN"
   $stmt=$conexion->prepare('SELECT COUNT(*) AS TOTAL FROM USUARIOS WHERE EMAIL=:email AND PASS=:pass');
   $stmt->bindParam(":email",$email);
   $stmt->bindParam(":pass",$pass);

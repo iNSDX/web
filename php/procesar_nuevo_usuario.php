@@ -30,7 +30,7 @@ if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']){
 
 		if (count($errores)>0) {
 			$_SESSION["errores"] = $errores;
-			Header('Location: error.php');
+			Header('Location: ../error.php');
 		}else{
 			if(isset($_SESSION["registro"]) && nuevo_cliente($conexion,$nuevoUsuario)){
 				$_SESSION['resgistrook']= "Registrado correctamente, inicie sesión.";

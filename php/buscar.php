@@ -35,7 +35,13 @@ $conexion = crearConexionBD();
     if($numrows > 0){ ?>
         <table class='tabla_datos table table-condensed table-hover table-striped bootgrid-table' cellspacing='0'>
                     <thead>
-                        <tr><th>ID</th>
+                        <tr>
+                            <?php
+                            if(isset($_SESSION['usuario'])){
+                                if($_SESSION['usuario']['TIPO'] != 'Cliente'){ ?>
+                            <th>ID</th>
+                            <?php }
+                               } ?>
                             <th>Nombre</th>
                             <th>Familia</th>
                             <th>Precio €</th>

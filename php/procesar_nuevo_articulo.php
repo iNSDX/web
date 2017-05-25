@@ -25,6 +25,13 @@ if(!empty($_POST)){
     $idalm = $_POST['idalm'];
     $idprom = $_POST['idprom'];
 
+    $errores = validarDatosArticulo($nombre,$precioCoste,$precioVenta,$base,$iva,$margen,$baja,$ventas,$stock,$familia);
+
+    if (count($errores)>0) {
+        $_SESSION["errores"] = $errores;
+        Header('Location: ../error.php');
+    }
+
     if(nuevo_articulo($conexion,$nombre,$descripcion,$precioCoste,$precioVenta,$base,$iva,$margen,$baja,$ventas,$stock,$familia,$subfamilia,$idprov,$idalm,$idprom)){
 
     $query = "SELECT * FROM ARTICULOS ORDER BY NOMBRE";
@@ -47,7 +54,7 @@ if(!empty($_POST)){
             <td><?php echo $fila['NOMBRE']; ?></td>
             <td><?php echo $fila['NOMBREFAMILIA']; ?></td>
             <td><?php echo $fila['PRECIOVENTA']; ?></td>
-            
+
             <?php
             if(isset($_SESSION['usuario'])){
                 if($_SESSION['usuario']['TIPO'] == 'Propietario' || $_SESSION['usuario']['TIPO'] == 'Gerente'){?>
@@ -173,6 +180,41 @@ if(!empty($_POST)){
 
     </tbody></table>
 <?php
+    }
+
+    function validarDatosArticulo($nombre,$precioCoste,$precioVenta,$base,$iva,$margen,$baja,$ventas,$stock,$familia){
+
+    	if($nombre=="")
+    	  $errores[]= "<p>El nombre no puede estar vacío</p>";
+
+    	if($precioVenta=="")
+    	  $errores[]= "<p>Precio venta no puede estar vacío</p>";
+
+    	if($precioCoste=="")
+    	  $errores[]= "<p>Precio coste no puede estar vacío</p>";
+
+        if($base=="")
+          $errores[]= "<p>Base imponible no puede estar vacía</p>";
+
+        if($iva=="")
+          $errores[]= "<p>Iva no puede estar vacío</p>";
+
+        if($margen=="")
+          $errores[]= "<p>Margen no puede estar vacío</p>";
+
+        if($baja=="")
+          $errores[]= "<p>Dado baja no puede estar vacío</p>";
+
+        if($ventas=="")
+          $errores[]= "<p>Nº ventas no puede estar vacío</p>";
+
+        if($stock=="")
+          $errores[]= "<p>Stock no puede estar vacío</p>";
+
+        if($familia=="")
+          $errores[]= "<p>Familia no puede estar vacía</p>";
+
+    	return $errores;
     }
 
     cerrarConexionBD($conexion);

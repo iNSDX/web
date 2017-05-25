@@ -22,21 +22,14 @@
 				          </p>
 				          </header>
 
-
-				<!--	<div class="row">
-						<section class="container">
-							<div id="map" class="fh5co-map"></div>
-						</section>
-					</div>-->
-
 						<div class="row">
 							<section class="8u 12u(mobile) special">
 								<header id="Titulo"> <h1>¡Estamos aquí! </h1> </header>
-                <iframe
-        width="600"
-        height="450"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDx0fnG-FnCLrIV6sSWcsEZjuD7q4H3sik&q=Expendeduría+Nº1,Ibros+Jaén" allowfullscreen>
+        <iframe
+        	width="600"
+        	height="450"
+        	frameborder="0" style="border:0"
+        	src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDx0fnG-FnCLrIV6sSWcsEZjuD7q4H3sik&q=Expendeduría+Nº1,Ibros+Jaén" allowfullscreen>
         </iframe>
 							</section>
 
