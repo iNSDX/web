@@ -74,8 +74,7 @@
 											min="1" max="<?php echo $total_registros;?>"
 											value="<?php echo $pag_tam;?>" autofocus="autofocus" />
 										artículos de <?php echo $total_registros;?>
-										<button type="button" name="add" id="add" data-toggle="modal"
-										 data-target="#add_data_Modal" class="button small">Cambiar</button>
+										<button type="submit" name="changepag" id="changepag" class="button small">Cambiar</button>
 									</form>
 								</nav>
 
