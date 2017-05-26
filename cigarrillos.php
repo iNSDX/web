@@ -1,4 +1,3 @@
-
 <?php
 	session_start();
 
@@ -106,6 +105,7 @@
 									 <?php } ?>
 						     </div>
 						   </div>
+
 			<?php include_once("includes/footer.php"); ?>
 </body>
 

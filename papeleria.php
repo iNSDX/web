@@ -1,4 +1,3 @@
-
 <?php
 	session_start();
 
@@ -21,7 +20,7 @@
 
 	$palabra = 'papeleria';
 
-	$query = "SELECT * FROM ARTICULOS WHERE NOMBRESUBFAMILIA='".$palabra."'";
+	$query = "SELECT * FROM ARTICULOS WHERE NOMBREFAMILIA='".$palabra."'";
 
 
 	$total_registros = total_consulta_elementos($conexion,$query);
@@ -47,8 +46,7 @@
 
 
 		</head>
-
-	 <body>
+<body class="no-sidebar">
 				 <?php
 					include_once("includes/header.php");
 				 ?>
@@ -58,12 +56,11 @@
 					 <div class="container">
 						 <article id="main" class="special">
 							 <header>
-								 <h2><a href="papeleria.php">Papelería</a></h2>
+								 <h2><a href="papeleria.php">Papeleria</a></h2>
 								 </header>
 							 </article>
-						 </div>
-						  </div>
-
+					</div>
+				 </div>
 								 <nav>
 									<form method="get" action="papeleria.php">
 										<input id="PAG_NUM" name="PAG_NUM" type="hidden" value="<?php echo $pagina_seleccionada?>"/>
@@ -106,7 +103,7 @@
 						     </div>
 						   </div>
 
+			<?php include_once("includes/footer.php"); ?>
+</body>
 
-		 <?php include_once("includes/footer.php"); ?>
- </body>
 </html>
