@@ -25,7 +25,7 @@
                         <div class="box">
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
-                                 <form action="php/procesar_nuevo_usuario.php" id="register-form" method="post" html="{:multipart=>true}"/>
+                                 <form action="php/procesar_nuevo_usuario.php" id="register-form" method="post">
                                      <div class="form-group">
                                      <input id="nombre" name="nombre" placeholder="Nombre" class="form-control" type="text" pattern="[A-Za-z0-9_-]{1,}" required/>
                                      <span class="glyphicon form-control-feedback"></span>

@@ -47,8 +47,7 @@
 
 
 		</head>
-
-	 <body>
+<body class="no-sidebar">
 				 <?php
 					include_once("includes/header.php");
 				 ?>
@@ -64,9 +63,8 @@
 								 </p>
 								 </header>
 							 </article>
-						 </div>
-						  </div>
-
+					</div>
+				 </div>
 								 <nav>
 									<form method="get" action="cigarrillos.php">
 										<input id="PAG_NUM" name="PAG_NUM" type="hidden" value="<?php echo $pagina_seleccionada?>"/>
@@ -108,8 +106,7 @@
 									 <?php } ?>
 						     </div>
 						   </div>
+			<?php include_once("includes/footer.php"); ?>
+</body>
 
-
-		 <?php include_once("includes/footer.php"); ?>
- </body>
 </html>

@@ -10,7 +10,7 @@
 
      </head>
 
-	  <body>
+	  <body class="no-sidebar">
 					<?php
 					 include_once("includes/header.php");
 					?>
@@ -25,9 +25,9 @@
 										Jaén
 									</p>
 									</header>
-
 							<a href="#" id="first-image" class="image featured"><img src="images/estanco.jpg" alt="" /></a>
-						<hr />
+
+
 
 						<div class="row">
 							<article class="3u 12u(mobile) special">
@@ -61,7 +61,9 @@
 
 
 				</div>
-
+            </article>
+        </div>
+    </div>
 			<?php include_once("includes/footer.php"); ?>
 
 

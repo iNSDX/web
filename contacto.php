@@ -27,6 +27,7 @@
 				          </p>
 				          </header>
 
+
 						<div class="row">
 							<section class="8u 12u(mobile) special">
 								<header id="Titulo"> <h1>¡Contacta con nosotros! </h1> </header>
@@ -37,7 +38,7 @@
 										<input type="text" id="lname" name="lname" class="form-control" placeholder="Apellidos" required>
 									</div>
 									<div class="field half form-group">
-										<input type="text" id="email" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" placeholder="Email" required>
+										<input type="text" id="emailcon" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" placeholder="Email" required>
 									</div>
 									<div class="field form-group">
 										<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje. Le responderemos lo antes posible. Gracias :)" required></textarea>
@@ -51,7 +52,7 @@
 							</section>
 
 							<section class="3u 12u(mobile) special">
-								<header id="Titulo"> <h1>¿Hablamos? </h1> </header>
+								<header id="Titulo2"> <h1>¿Hablamos? </h1> </header>
 								<ul class="contact">
 									<li>
 										<h3>Email</h3>
@@ -65,7 +66,9 @@
 								</ul>
 							</section>
 				</div>
-
+			</article>
+		  </div>
+		  </div>
 
 			<?php include_once("includes/footer.php"); ?>
 

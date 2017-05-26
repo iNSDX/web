@@ -6,7 +6,7 @@
 
 		</head>
 
-	 <body>
+	 <body class="no-sidebar">
 				 <?php
 					include_once("includes/header.php");
 				 ?>
@@ -18,7 +18,7 @@
 								<header>
 									<h2><a href="#">Comestibles</a></h2>
 									</header>
-						<hr />
+
 
 						<div class="row">
 							<article class="6u 12u(mobile) special">
@@ -35,10 +35,11 @@
 								</header>
 
 							</article>
-							</article>
 
 				</div>
-
+			</article>
+		</div>
+	</div>
 			<?php include_once("includes/footer.php"); ?>
 
 

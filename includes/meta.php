@@ -12,8 +12,8 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/additional-methods.min.js"></script>
 		<script src="js/validacionRegistro.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
-    <link href="css/login-register.css" rel="stylesheet" />
+    <link href="css/login-register.css" rel="stylesheet">
 		<link href="css/register.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
 		  <link href="css/w3.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/main.css">
