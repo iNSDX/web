@@ -52,7 +52,7 @@ if(!isset($_SESSION['usuario'])){
 												<?php
 												if(isset($_SESSION['usuario'])){
 													if($_SESSION['usuario']['TIPO'] == 'Propietario' || $_SESSION['usuario']['TIPO'] == 'Gerente'){ ?>
-														<button type="button.big" name="add" id="add" data-toggle="modal"
+														<button type="button" name="add" id="add" data-toggle="modal"
 														 data-target="#add_data_Modal" class="button">Nuevo Artículo</button>
 											<?php   }
 												} ?>
@@ -63,7 +63,7 @@ if(!isset($_SESSION['usuario'])){
 										    <div class="modal-dialog">
 										        <div class="modal-content">
 										            <div class="modal-header">
-										                <button type="button" class="button" data-dismiss="modal">&times;</button>
+										                <button type="button" class="close" data-dismiss="modal">&times;</button>
 										                <h4 class="modal-title">Añadir artículo</h4>
 										            </div>
 										            <div class="modal-body">
