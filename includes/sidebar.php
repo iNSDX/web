@@ -32,12 +32,8 @@
                 </ul>
             </li>
 
-            <li><a href="arqueo.php">Arqueo Caja</a></li>
-      <?php } ?>
-
-    <?php 	if($_SESSION['usuario']['TIPO'] != 'Cliente'){ ?>
-
-            <li><a href="albaran.php">Pedidos</a></li>
+            <li><a href="hArqueos.php">Arqueo Caja</a></li>
+            <li><a href="hPedidos.php">Pedidos</a></li>
             <li><a href="vercontactos.php">Contactos</a></li>
 
       <?php } ?>

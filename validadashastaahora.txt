@@ -1,3 +1,0 @@
-ciga,come,cont,fac,gol,hventas,index,indexinterno,inven,locali,otros,pape,pica,produc,puros,snacks,tabaco,vercontactos
-
-queda albar,arq,error,exito_cont & and res
