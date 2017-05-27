@@ -74,7 +74,7 @@ if(!isset($_SESSION['usuario'])){
 										                    <label>Familia*</label>
 										                    <!--<input type="text" name="familia" id="familia" class="form-control"/>-->
 										                    <select name="familia" id="familia" required>
-										                        <option value=""></option>
+										                        <option value="">Requerido</option>
 										                        <option value="tabaco">Tabaco</option>
 										                        <option value="golosinas">Golosinas</option>
 										                        <option value="comestibles">Comestibles</option>
@@ -97,7 +97,7 @@ if(!isset($_SESSION['usuario'])){
 										                    <label>Iva*</label>
 										                    <!--<input type="text" name="iva" id="iva" class="form-control"/>-->
 										                    <select name="iva" id="iva" required>
-										                        <option value=""></option>
+										                        <option value="">Requerido</option>
 										                        <option value="iva1">21%</option>
 										                        <option value="iva2">10%</option>
 										                        <option value="iva3">8%</option>
@@ -106,7 +106,7 @@ if(!isset($_SESSION['usuario'])){
 										                    <label>Margen*</label>
 										                    <!--<input type="text" name="margen" id="margen" class="form-control"/>-->
 										                    <select name="margen" id="margen" required>
-										                        <option value=""></option>
+										                        <option value="">Requerido</option>
 										                        <option value="margen1">margen1</option>
 										                        <option value="margen2">margen2</option>
 										                        <option value="margen3">margen3</option>
@@ -115,7 +115,7 @@ if(!isset($_SESSION['usuario'])){
 										                    <label>Dado de baja*</label>
 										                    <!--<input type="text" name="baja" id="baja" class="form-control"/>-->
 										                    <select name="baja" id="baja" required>
-										                        <option value=""></option>
+										                        <option value="">Requerido</option>
 										                        <option value="0">False</option>
 										                        <option value="1">True</option>
 										                    </select>

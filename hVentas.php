@@ -75,7 +75,7 @@ if(isset($_SESSION['usuario'])){
 										                    <label>Fiado*</label>
 										                    <!--<input type="text" name="familia" id="familia" class="form-control"/>-->
 										                    <select name="fiado" id="fiado" required>
-										                        <option value=""></option>
+										                        <option value="">Requerido</option>
 										                        <option value="0">No</option>
 										                        <option value="1">Sí</option>
 										                    </select>

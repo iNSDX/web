@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION["errores"])){
+    Header('Location: indexinterno.php');
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
