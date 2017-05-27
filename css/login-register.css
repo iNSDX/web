@@ -166,7 +166,6 @@
 }
 
 .login .btn-login:hover, .registerBox .loginBox .btn-register:hover{
-    background-color: ;
     color: white;
 }
 .login .form-control .loginBox{
@@ -175,9 +174,7 @@
     box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
     color: #FFFFFF;
 }
-.login .form-control:hover{
-    background-color:
-}
+
 .login .form-control:focus{
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
     background-color: rgba(0,0,0,0.23);
@@ -226,8 +223,7 @@
 }
 .error{
     background-color: #E74F4F;
-    position: sticky;
-    top: 4;
+    top: 4px;
     padding: 10px 0;
     /*border-radius:  0 0 5px 5px;*/
     border-radius:  0 0 5px 5px;

@@ -1,11 +1,14 @@
 <!-- Footer -->
-  <div id="footer">
+
+
+<footer>
+    <div id="footer">
     <div class="container">
 
       <div class="row">
         <div class="12u">
 
-          <!-- Copyright -->
+
             <div class="copyright">
               <ul class="menu">
                 <li>&copy;2017 Estanco de Ibros</li><li>Todos los derechos reservados.</li>
@@ -17,3 +20,4 @@
       </div>
     </div>
   </div>
+</footer>

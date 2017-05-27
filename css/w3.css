@@ -1,4 +1,4 @@
-* W3.CSS 4.04 Apr 2017 by Jan Egil and Borge Refsnes */ html {
+html {
     box-sizing: border-box
 }
 *,
@@ -309,7 +309,7 @@ a {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+  
 }
 .w3-disabled,
 .w3-btn:disabled,
@@ -317,14 +317,7 @@ a {
     cursor: not-allowed;
     opacity: 0.3
 }
-.w3-disabled *,
-:disabled * {
-    pointer-events: none
-}
-.w3-btn.w3-disabled:hover,
-.w3-btn:disabled:hover {
-    box-shadow: none
-}
+
 .w3-badge,
 .w3-tag {
     background-color: #000;

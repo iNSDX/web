@@ -46,17 +46,17 @@
 
 
 		</head>
-<body class="no-sidebar">
-				 <?php
-					include_once("includes/header.php");
-				 ?>
+		<body class="no-sidebar Site">
+	 			 <?php
+	 				include_once("includes/header.php");
+	 			 ?>
 
-				 <!-- Nuestros productos -->
-				 <div class="wrapper style1">
+	 				<!-- Nuestros productos -->
+	 				<div class="wrapper style1 Site-content">
 					 <div class="container">
 						 <article id="main" class="special">
 							 <header>
-								 <h2><a href="papeleria.php">Papeleria</a></h2>
+								 <h2><a href="papeleria.php">Papelería</a></h2>
 								 </header>
 							 </article>
 					</div>

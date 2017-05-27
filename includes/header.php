@@ -1,4 +1,4 @@
-<!--<body class="no-sidebar">-->
+
 
     <?php include_once("login_register_modal.php"); ?>
 
@@ -23,4 +23,3 @@
 </nav>
 </div>
 </div>
-<!--</body>-->

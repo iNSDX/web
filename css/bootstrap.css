@@ -1917,10 +1917,7 @@ border-color : #255625;
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
 background-image : none;
 }
-.btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-background-color : ;
-border-color : #;
-}
+
 .btn-success .badge {
 color : #5cb85c;
 background-color : #fff;

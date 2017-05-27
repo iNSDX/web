@@ -6,13 +6,13 @@
 
 		</head>
 
-	 <body class="no-sidebar">
+	 <body class="no-sidebar Site">
 				 <?php
 					include_once("includes/header.php");
 				 ?>
 
 					<!-- Nuestros productos -->
-					<div class="wrapper style1">
+					<div class="wrapper style1 Site-content">
 						<div class="container">
 							<article id="main" class="special">
 								<header>
@@ -56,7 +56,6 @@
 			</div>
 			</div>
 			<?php include_once("includes/footer.php"); ?>
-
-
 	</body>
+
 </html>
