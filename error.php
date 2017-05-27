@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION["errores"])){
+if(!isset($_SESSION["errores"]) || !isset($_SESSION['excepcion'])){
     Header('Location: indexinterno.php');
 }
  ?>
@@ -24,10 +24,18 @@ if(!isset($_SESSION["errores"])){
           <h2>Algo no ha ido bien...&hellip;</h2>
           <h4> Si desea volver a página de inicio haga click <a class="textogr" href="index.php"> aquí.</a> </h4>
         </div>
-        <p>¿Puede ser que he haya roto algo?</p>
+        <p>¿Puede ser que se haya roto algo?</p>
         <img src="images/homer.png" alt="error">
 
-        <?php echo $_SESSION["errores"]; ?>
+        <?php
+
+        echo $_SESSION["errores"];
+        unset($_SESSION["errores"]);
+
+        echo $_SESSION["excepcion"];
+        unset($_SESSION["excepcion"]);
+
+        ?>
 
       </div>
 

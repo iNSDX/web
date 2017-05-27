@@ -6,7 +6,7 @@ function consultarTodosClientes($conexion) {
      	try {
      	    return $conexion->query($consulta);
      	}catch(PDOException $e){
-     		$_SESSION['excepcion'] = $e->GetMessage();
+     		$_SESSION['excepcion'] = $e->getMessage();
      		header("Location: ../error.php");
      	}
 }
@@ -24,7 +24,7 @@ function consultarTodosClientes($conexion) {
      return true;
 
    } catch(PDOException $e){
-     return false;
+     return $e->getMessage();
    }
 }
 
@@ -48,7 +48,7 @@ function modificar_cliente($conexion,$idCliente,$nombre,$apellidos,$fechaNacimie
 		$stmt->execute();
 		return true;
 	} catch(PDOException $e) {
-		return false;
+		return $e->getLine();
     }
 }
 
@@ -59,7 +59,7 @@ function aceptar_cliente($conexion,$idCliente) {
 		$stmt->execute();
 		return true;
 	} catch(PDOException $e) {
-		return false;
+		return $e->getFile();
     }
 }
 

@@ -31,7 +31,7 @@ function editar_venta($conexion,$idventa,$importe,$fiado,$idcaja,$idingreso) {
         $stmt->execute();
             return true;
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getTrace();
     }
 }
 
@@ -54,7 +54,7 @@ function nuevaFactura($conexion,$idVenta){
 		$stmt->execute();
 		return true;
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getLine();
     }
 }
 

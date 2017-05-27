@@ -37,7 +37,7 @@ function editar_arqueo($conexion,$idcaja,$contadocaja,$totalventas,$dinerofiado,
         $stmt->execute();
             return true;
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getTrace();
     }
 }
 

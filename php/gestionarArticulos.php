@@ -7,8 +7,8 @@ function consultarTodosArticulos($conexion) {
      	try {
      	    return $conexion->query($consulta);
      	}catch(PDOException $e){
-     		$_SESSION['excepcion'] = $e->GetMessage();
-     		header("Location: php/error.php");
+     		$_SESSION['excepcion'] = $e->getMessage();
+     		header("Location: ../error.php");
      	}
 }
 
@@ -19,8 +19,8 @@ function consultarListaArticulosFamilia($conexion,$familia) {
 	try {
 	    return $conexion->query($consulta);
 	}catch(PDOException $e){
-		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: php/error.php");
+		$_SESSION['excepcion'] = $e->getMessage();
+		header("Location: ../error.php");
 	}
 }
 
@@ -31,8 +31,8 @@ function consultarListaArticulosSubfamilia($conexion,$familia,$subFamilia) {
 	try {
 	    return $conexion->query($consulta);
 	}catch(PDOException $e){
-		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: php/error.php");
+		$_SESSION['excepcion'] = $e->getTrace();
+		header("Location: ../error.php");
 	}
 }
 
@@ -43,8 +43,8 @@ function consultarArticulo($conexion,$nombreArticulo) {
 	try {
 	    return $conexion->query($consulta);
 	}catch(PDOException $e){
-		$_SESSION['excepcion'] = $e->GetMessage();
-		header("Location: php/error.php");
+		$_SESSION['excepcion'] = $e->getMessage();
+		header("Location: ../error.php");
 	}
 }
 
@@ -99,7 +99,7 @@ function editar_articulo($conexion,$idarticulo,$nombre,$descripcion,$precioCoste
         $stmt->execute();
             return true;
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getTrace();
     }
 }
 
@@ -110,7 +110,7 @@ function quitar_articulo($conexion,$idArticulo) {
 		$stmt->execute();
 		return true;
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getTrace();
     }
 }
 
@@ -134,7 +134,7 @@ function modificar_descripcion_articulo($conexion,$idArticulo,$nuevaDescripcion)
 		$stmt->execute();
 		return "";
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getLine();
     }
 }
 
@@ -146,7 +146,7 @@ function modificar_precioventa_articulo($conexion,$idArticulo,$nuevoPrecio) {
 		$stmt->execute();
 		return "";
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getLine();
     }
 }
 

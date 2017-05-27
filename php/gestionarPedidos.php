@@ -31,7 +31,7 @@ function editar_pedido($conexion,$idpedido,$fechaentrega,$importecompra,$idprove
         $stmt->execute();
             return true;
 	} catch(PDOException $e) {
-		return $e->getMessage();
+		return $e->getTrace();
     }
 }
 

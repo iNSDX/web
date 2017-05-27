@@ -5,7 +5,7 @@ function consultarTodosContactos($conexion) {
      	try {
      	    return $conexion->query($consulta);
      	}catch(PDOException $e){
-     		$_SESSION['excepcion'] = $e->GetMessage();
+     		$_SESSION['excepcion'] = $e->getMessage();
      		header("Location: ../error.php");
      	}
 }
@@ -21,7 +21,7 @@ function consultarTodosContactos($conexion) {
      return true;
 
    } catch(PDOException $e){
-     return false;
+     return $e->getFile();
    }
 }
 
