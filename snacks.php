@@ -73,9 +73,9 @@
 									<button type="submit" name="changepag" id="changepag" class="button small">Cambiar</button>
 								</form>
 							</nav>
+
 					</div>
 				 </div>
-
 
 
 								<div class="w3-row-padding">
