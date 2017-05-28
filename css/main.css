@@ -228,7 +228,7 @@
 
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 250px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -1388,7 +1388,7 @@
 
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 250px) {
 
 		.row > * {
 			padding: 20px 0 0 20px;
@@ -2722,7 +2722,7 @@
 		display: none;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 250px) {
 
 		/* Basic */
 

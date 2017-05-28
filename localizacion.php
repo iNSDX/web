@@ -27,7 +27,7 @@
 						<div class="row">
 							<section class="8u 12u(mobile) special">
 								<header id="Titulo"> <h1>¡Estamos aquí! </h1> </header>
-        <iframe
+        <iframe class="12u 12u(mobile) special"
         	width="600"
         	height="450"
         	style="border:0"
