@@ -309,7 +309,7 @@ a {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-  
+
 }
 .w3-disabled,
 .w3-btn:disabled,
@@ -571,7 +571,7 @@ a {
     }
     .w3-col.m3,
     .w3-quarter {
-        width: 24.99999%
+        width: 19.99999%
     }
     .w3-col.m4,
     .w3-third {

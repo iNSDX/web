@@ -81,7 +81,7 @@
 									<?php
 										foreach($filas as $fila) {
 									?>
-										<div class="w3-third w3-container w3-margin-bottom">
+										<div class="w3-quarter w3-container w3-margin-bottom">
 									  	<img src="images/articulos/<?php echo $fila['IDARTICULO']; ?>.jpg" alt="<?php echo $fila['NOMBRE']; ?>" class="img-pequeña">
 									  	<div class="w3-container w3-white">
 											<p><b><?php echo $fila['NOMBRE']; ?></b></p>
