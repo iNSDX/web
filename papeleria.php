@@ -59,19 +59,20 @@
 								 <h2><a href="papeleria.php">Papelería</a></h2>
 								 </header>
 							 </article>
+							 <nav>
+								<form method="get" action="papeleria.php">
+									<input id="PAG_NUM" name="PAG_NUM" type="hidden" value="<?php echo $pagina_seleccionada?>"/>
+									Mostrando
+									<input id="PAG_TAM" name="PAG_TAM" type="number"
+										min="1" max="<?php echo $total_registros;?>"
+										value="<?php echo $pag_tam;?>" autofocus="autofocus" />
+									artículos de <?php echo $total_registros;?>
+									<button type="submit" name="changepag" id="changepag" class="button small">Cambiar</button>
+								</form>
+							</nav>
 					</div>
 				 </div>
-								 <nav>
-									<form method="get" action="papeleria.php">
-										<input id="PAG_NUM" name="PAG_NUM" type="hidden" value="<?php echo $pagina_seleccionada?>"/>
-										Mostrando
-										<input id="PAG_TAM" name="PAG_TAM" type="number"
-											min="1" max="<?php echo $total_registros;?>"
-											value="<?php echo $pag_tam;?>" autofocus="autofocus" />
-										artículos de <?php echo $total_registros;?>
-										<button type="submit" name="changepag" id="changepag" class="button small">Cambiar</button>
-									</form>
-								</nav>
+
 
 
 								<div class="w3-row-padding">
